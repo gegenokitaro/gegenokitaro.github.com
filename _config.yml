@@ -1,0 +1,10 @@
+name: "sol means soil"
+description: "something about s-thing"
+
+#url: "sol.github.io"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
+pygments: true
