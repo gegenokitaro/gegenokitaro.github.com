@@ -43,7 +43,10 @@ Satu-satunya entitas di muka bumi yang ga marah, mangkel, bosen, jengkel, gelo k
 3. Masih bingung dengan cara kerja sistem operasi basis linux? Dicoba dulu aja pake virtualisasi. Bisa menggunakan VirtualBox ato VMWare atau apapun yang bisa dipake virtualisasi. Untung-untung ada mesin nganggur buat percobaan. Disitu bebas dikonfig, dikustomisasi, nanti kalo udah lumayan paham, baru install di mesin utama. Untuk meminimalisir resiko.
 4. Cari dukungan tenaga ahli disekitar kelian. Ini yang aga susah. Tapi komunitas linux udah menyebar di Indonesia, kecuali situ tinggal di daerah terpencil yang rata-rata penduduknya masih belum begitu mengenal teknologi, misal di bawah tanah. Kurcaci-kurcaci bawah tanah ga tau ada entitas yang namanya komputer.
 5. Belajar bahasa Inggris. Ga semua wiki dari distro bersangkutan menyediakan terjemahan bahasa Indonesia. google translate pun kadang ngaco. Jadi selamat belajar bahasa Inggris.
-6. Perbanyak ibadah. niscaya dosa mu diampuni.
+6. Perbanyak ibadah. niscaya dosa mu diampuni.<br><br>
+
+####Udah. Capek.
+Segini dulu. Asu kabeh
 <br>
 <br>
 <br>
