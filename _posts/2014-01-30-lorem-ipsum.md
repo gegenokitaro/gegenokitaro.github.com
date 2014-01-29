@@ -1,5 +1,5 @@
 ---
-title: Lorem Ipsum Dolor Sit Amet
+title: Lorem Ipsum
 layout: default
 ---
 
