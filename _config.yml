@@ -1,0 +1,10 @@
+name: "s-thing"
+description: "something about s-thing"
+
+url: "gegenokitaro.github.io"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
+pygments: true
