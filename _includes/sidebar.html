@@ -1,11 +1,15 @@
-<h3>About Me</h3>
+<div class="container-fluid">
+<div class="row-fluid">
+ <div class="span3">
+   <div class="well sidebar-nav sidebar-nav-fixed">
+    <h3>About Me</h3>
+       <p>I don't know. I'm starting this s-thing last night, and i'm still here, my eyes hurts.</p>
+       <br>
+    <ul>
+        {% for post in site.posts limit: 5 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+   </div><!--/.well -->
+ </div><!--/span-->
 
-<p>Donec libero libero, bibendum non condimentum ac, ullamcorper at sapien.\
- Duis feugiat urna vel justo cursus facilisis. Vivamus ligula dui, convalli\
-s a varius vitae, facilisis eget magna.</p>
-
-<ul>
-  {% for post in site.posts limit: 5 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
