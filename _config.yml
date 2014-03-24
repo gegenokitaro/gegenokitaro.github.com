@@ -5,11 +5,6 @@ url: "gegenokitaro.github.io"
 
 paginate: 10
 
-markdown: kramdown
-kramdown:
-        use_coderay: true
-        coderay:
-                coderay_line_numbers: table
-                coderay_css: class
+markdown: rdiscount
 permalink: pretty
 pygments: true
