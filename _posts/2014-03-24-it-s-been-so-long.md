@@ -19,7 +19,7 @@ Just kidding, actually i'm working on a small icon set, which i use as my dock i
 <p align="center"><img style="float: center" src="/img/icon_hand_made.png" /></p>
 <br>
 
-Well, i pray this work will continue. I hope. Somebody wants to help, let me know. How? Maybe through my email at `sol.rizal@gmail.com`. Remember, please follow my icon style if you want to help. or not. Make your own. Carelessly i don't really care. 
+Well, i pray that this work will continue. I hope. Somebody wants to help, let me know. How? Maybe through my email at `sol.rizal@gmail.com`. Remember, please follow my icon style if you want to help. or not. Make your own. Carelessly i don't really care. 
 
 	such a good time to work in this manner.
 	but i'm working on my 'unimportant project' including some monkey and others thing, so this work, this icon set, will nearly as hopeless as my last cat which is die. 
