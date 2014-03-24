@@ -26,6 +26,9 @@ Well, i pray this work will continue. I hope. Somebody wants to help, let me kno
 
 and with that.. i'm finishing my post.
 
+<br>
+<br>
+
 #### # Screenshit time.. (not a typo, btw)
 
 and this is my screenshot which is contain my icon set, as i use them for my dock. I'm not actively producing desktop screenshot for gahnoo plus linux environment anymore, but i still love simple, beautiful, and work out of the box desktop. And so, this desktop screenshot below isn't suitable for ricing or other submission, it's just my working desktop. On my gentoo machine, which is so unresponsive D:
