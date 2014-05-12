@@ -38,7 +38,7 @@ function showSpoiler(obj)
 </head>
 ### Today's Idea
 
-I was talking with my friends about altered dimension, devil, satan, and jinn (?spectral creatures, i guess?) and it's a nice topic i think.. My Teacher said, jinn, or devil, or any spectral creatures that appeared before any human eyes was a result of manifestation. Creatures like that, were energies that pile up and became a 'hard material'. In my language, it's called "penampakan". And that manifestation is from our thought. It explains why many sightings all over the world takes different form. So we move from that talk to any sightings-talking. We talked about how my friend meet his grandma that was passed away a long time ago. He said, it's not his grandma, but a spectral creatures that look like his grandma. We came to a conclusion. There're 2 type of sightings that can occur related to any deceased person. Wether it's the person we knew or not. One, it's from memories that left before they're passed away. And the other is from that spectral creatures that made its manifestation from our thoughts. Ah.. my English isn't good, so i can't continue this babbling anymore.. well..
+I was talking with my friends about altered dimension, devil, satan, and jinn (?spectral creatures, i guess?) and it's a nice topic i think.. My Teacher said, jinn, or devil, or any spectral creatures that appeared before any human eyes was a result of manifestation. Creatures like that, were actualy energies that pile up and became a 'hard material'. In my language, it's called "penampakan". And that manifestation is from our thought. It explains why many sightings all over the world takes different form. So we move from that talk to any sightings-talking. We talked about how my friend meet his grandma that was passed away a long time ago. He said, it's not his grandma, but a spectral creatures that look like his grandma. We came to a conclusion. There're 2 type of sightings that can occur related to any deceased person. Wether it's the person we knew or not. One, it's from memories that left before they're passed away. And the other is from that spectral creatures that made its manifestation from our thoughts. Ah.. my English isn't good, so i can't continue this babbling anymore.. well..
 <br>
 <br>
 ### XMonad Again..
@@ -49,7 +49,7 @@ Actually, i was going to add a spoiler on to my code, but it didn't work as it's
 <p align="center"><img style="float: center" src=/img/today1.png /></p>
 
 <br>
-And below is the code for my xmona. Or you can download it [here](/assets/ge.xmonad.rar) for complete packages including some home made icons and scripts. Tell me if you have any difficulties implementing my config.<br>
+And below is the code for my xmonad. Or you can download it [here](/assets/ge.xmonad.rar) for complete packages including some home made icons and scripts. Tell me if you have any difficulties implementing my config.<br>
 <br>
 
 	import XMonad 
