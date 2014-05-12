@@ -1125,6 +1125,26 @@
         width: auto;
      }
  }
+
+.desibar-nav-fixed {
+     position:fixed;
+     top:340px;
+     width:21.97%;
+ }
+
+ @media (max-width: 767px) {
+     .desibar-nav-fixed {
+         width:auto;
+     }
+ }
+
+ @media (max-width: 979px) {
+     .desibar-nav-fixed {
+         position:static;
+        width: auto;
+     }
+ }
+
 #wrap {
   min-height: 100%;
   height: auto !important;
