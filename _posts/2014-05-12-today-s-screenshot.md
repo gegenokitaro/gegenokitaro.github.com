@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Today's Screenshot
+title: Today was a good day
 description: ""
 category:
 tags: []
@@ -37,12 +37,15 @@ function showSpoiler(obj)
 	</script>
 </head>
 
-## XMonad Again..
+### XMonad Again..
 
+Actually, i was going to add a spoiler on to my code, but it wasn't work as it's intended to do, so i remove that spoiler. This post now contains my xmonad.hs code, so you can copy and paste it to your machine as well. 
+<br>
+<br>
 <p align="center"><img style="float: center" src=/img/today1.png /></p>
 
 <br>
-<br>
+And below is the code for my xmona. Or you can download it [here](/assets/ge.xmonad.rar) for complete packages including some home made icons and scripts. Tell me if you have any difficulties implementing my config.<br>
 <br>
 
 	import XMonad
@@ -91,17 +94,12 @@ function showSpoiler(obj)
 	fuck h = defaultPP
 		{ ppOutput		= hPutStrLn h
 		, ppCurrent		= dzenColor (blues) (black) . pad
-		--, ppCurrent		= wrap " ^fg(#ffffff)^r(42x16)^ib(1)^fg(#111111)^p(-38)" "^fg()"
 		, ppVisible		= dzenColor (white) (black) . pad
-		--, ppHidden		= wrap " ^fg(#505050)^r(42x16)^ib(1)^fg(#ffffff)^p(-38)" "^fg()"
 		, ppHidden		= dzenColor (white) (black) . pad
-		--, ppHiddenNoWindows	= wrap " ^fg(#505050)^r(42x16)^ib(1)^fg(#ffffff)^p(-38)" "^fg()"
 		, ppHiddenNoWindows	= dzenColor (greys) (black) . pad
 		, ppSep 		= " ^r(2x2) "
 		, ppWsSep		= ""
-		--, ppLayout		= \l -> ""
 		, ppLayout		= dzenColor (white) (black) . pad
-		--, ppTitle		= \t -> ""
 		, ppTitle		= dzenColor (white) (black) . pad
 		}
 	

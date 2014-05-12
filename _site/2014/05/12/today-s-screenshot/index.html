@@ -110,13 +110,17 @@ function showSpoiler(obj)
     </script>
 </head></p>
 
-<h2>XMonad Again..</h2>
+<h3>XMonad Again..</h3>
+
+<p>Actually, i was going to add a spoiler on to my code, but it wasn't work as it's intended to do, so i remove that spoiler. This post now contains my xmonad.hs code, so you can copy and paste it to your machine as well.
+<br>
+<br></p>
 
 <p align="center"><img style="float: center" src=/img/today1.png /></p>
 
 
 <p><br>
-<br>
+And below is the code for my xmona. Or you can download it <a href="/assets/ge.xmonad.rar">here</a> for complete packages including some home made icons and scripts. Tell me if you have any difficulties implementing my config.<br>
 <br></p>
 
 <pre><code>import XMonad
@@ -165,17 +169,12 @@ fuck :: Handle -&gt; PP
 fuck h = defaultPP
     { ppOutput      = hPutStrLn h
     , ppCurrent     = dzenColor (blues) (black) . pad
-    --, ppCurrent       = wrap " ^fg(#ffffff)^r(42x16)^ib(1)^fg(#111111)^p(-38)" "^fg()"
     , ppVisible     = dzenColor (white) (black) . pad
-    --, ppHidden        = wrap " ^fg(#505050)^r(42x16)^ib(1)^fg(#ffffff)^p(-38)" "^fg()"
     , ppHidden      = dzenColor (white) (black) . pad
-    --, ppHiddenNoWindows   = wrap " ^fg(#505050)^r(42x16)^ib(1)^fg(#ffffff)^p(-38)" "^fg()"
     , ppHiddenNoWindows = dzenColor (greys) (black) . pad
     , ppSep         = " ^r(2x2) "
     , ppWsSep       = ""
-    --, ppLayout        = \l -&gt; ""
     , ppLayout      = dzenColor (white) (black) . pad
-    --, ppTitle     = \t -&gt; ""
     , ppTitle       = dzenColor (white) (black) . pad
     }
 
@@ -208,7 +207,7 @@ main = do
        <!--<br>-->
     <!--<ul>
         
-        <li><a href="/2014/05/12/today-s-screenshot/">Today's Screenshot</a></li>
+        <li><a href="/2014/05/12/today-s-screenshot/">Today was a good day</a></li>
         
         <li><a href="/2014/03/24/it-s-been-so-long/">It's been so long</a></li>
         
@@ -227,13 +226,13 @@ main = do
         </div>
         <!--<div class="container-fluid">-->
 <!--<div class="row-fluid">-->
- <div class="span3">
+ <div class="span5">
    <div class="llew desibar-nav desibar-nav-fixed">
    <p><a href="/about"><img src="/img/dino.png"></a></p>
        <!--<br>-->
     <!--<ul>
         
-        <li><a href="/2014/05/12/today-s-screenshot/">Today's Screenshot</a></li>
+        <li><a href="/2014/05/12/today-s-screenshot/">Today was a good day</a></li>
         
         <li><a href="/2014/03/24/it-s-been-so-long/">It's been so long</a></li>
         
