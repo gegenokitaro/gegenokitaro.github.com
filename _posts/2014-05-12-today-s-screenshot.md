@@ -39,7 +39,7 @@ function showSpoiler(obj)
 
 ### XMonad Again..
 
-Actually, i was going to add a spoiler on to my code, but it wasn't work as it's intended to do, so i remove that spoiler. This post now contains my xmonad.hs code, so you can copy and paste it to your machine as well. 
+Actually, i was going to add a spoiler on to my code, but it didn't work as it's intended to do, so i remove that spoiler. This post now contains my xmonad.hs code, so you can copy and paste it to your machine as well. 
 <br>
 <br>
 <p align="center"><img style="float: center" src=/img/today1.png /></p>
@@ -48,12 +48,12 @@ Actually, i was going to add a spoiler on to my code, but it wasn't work as it's
 And below is the code for my xmona. Or you can download it [here](/assets/ge.xmonad.rar) for complete packages including some home made icons and scripts. Tell me if you have any difficulties implementing my config.<br>
 <br>
 
-	import XMonad
-	import Control.Monad
-	import System.IO
-	import XMonad.Hooks.DynamicLog
-	import XMonad.Hooks.ManageDocks
-	import XMonad.Hooks.SetWMName
+	import XMonad 
+	import Control.Monad 
+	import System.IO 
+	import XMonad.Hooks.DynamicLog 
+	import XMonad.Hooks.ManageDocks 
+	import XMonad.Hooks.SetWMName 
 	
 	import XMonad.Util.Run (spawnPipe)
 	import XMonad.Util.EZConfig (additionalKeys)
