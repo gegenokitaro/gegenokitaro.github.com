@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>s-thing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="something about s-thing">
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
+ript>
+    <![endif]-->
+  
+
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>s-thing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="something about s-thing">
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/zenburn.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
+ript>
+    <![endif]-->
+  </head>
+
+  <body>
+      <div id="wrap">
+<!--<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".na\
+v-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">s-thing</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li class="inactive"><a href="/about/">About</a></li>    
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>-->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/"><img src="/img/brand.png"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+        <div class="row-fluid">
+            <div class="span8">
+            <h3>I'm Documenting what i've done</h3>
+
+<p>With that said, this time it's xmonad again. yeah, i'm doing xmonad all over my free time. it's not like i have much free time, but, it is. i've a lot of free time and i don't know what to do. I hang around my monad over and over again, and you can see, below is my current xmonad setting. probably not the best but i'm not really dissapointed with this one.</p>
+
+<p><img src="/img/nganggur11.png" alt="screen" /></p>
+
+<p>if, by any chance, you want to make your monad looks like this, i will give some tuts, a step-by-step tuts to build a dissapointing-monad just like in picture above. Okay, here are the ingredients to make monad like that, and everything in this cooking-like tutorial is optional, you can change anything to suits your taste except the important part.</p>
+
+<pre><code>First, we need xmonad. I use both xmonad and xmonad-contrib.
+for terminal client, i use urxvt. you can use anything.
+panel, dzen2. those panel, in pink, is dzen2. i don't know how to do it besides using dzen2.
+music player, mpc + ncmpcpp. weechat, irc client. and so on.
+dmenu, for a launcher. so i can launch an app without much keybinding.
+
+summary:
+xmonad (xmonad-contrib) | dzen2 | urxvt | weechat | mpc + ncmpcpp (mpd) | dmenu
+</code></pre>
+
+<p><br>
+I will begin on costumizing some xmonad code. I have to code, in xmonad way, haskell. I don't know haskell that much, but with a little understanding, everything will be fine. First, make a monad directory at <code>~/.xmonad</code>. There, i will store my <code>xmonad.hs</code> and do <code>--recompile</code> to produce xmonad. From here, are we good?</p>
+
+<p>Okay, move to the next point. I will work inside <code>~/.xmonad</code> directory for a while. I will make <code>xmonad.hs</code> for the base dough to make this monad-cake. First thing, i will add some <code>import</code> to the <code>xmonad.hs</code>.</p>
+
+<div class="highlight"><pre><code class="language-hs" data-lang="hs"><span class="kr">import</span> <span class="nn">XMonad</span>
+<span class="kr">import</span> <span class="nn">Control.Monad</span>
+<span class="kr">import</span> <span class="nn">XMonad.Hooks.DynamicLog</span>
+<span class="kr">import</span> <span class="nn">XMonad.Hooks.ManageDocks</span>
+<span class="kr">import</span> <span class="nn">XMonad.Hooks.SetWMName</span>
+
+<span class="kr">import</span> <span class="nn">XMonad.Util.Run</span> <span class="p">(</span><span class="nf">spawnPipe</span><span class="p">)</span>
+<span class="kr">import</span> <span class="nn">XMonad.Util.EZConfig</span> <span class="p">(</span><span class="nf">additionalKeys</span><span class="p">,</span> <span class="nf">additionalMouseBindings</span><span class="p">)</span>
+<span class="kr">import</span> <span class="nn">XMonad.Util.SpawnOnce</span>
+<span class="kr">import</span> <span class="nn">XMonad.Util.Loggers</span>
+
+<span class="kr">import</span> <span class="k">qualified</span> <span class="nn">XMonad.StackSet</span> <span class="k">as</span> <span class="n">W</span>
+<span class="kr">import</span> <span class="k">qualified</span> <span class="nn">Data.Map</span> <span class="k">as</span> <span class="n">M</span>
+<span class="kr">import</span> <span class="nn">GHC.IO.Handle.Types</span> <span class="k">as</span> <span class="n">H</span>
+
+<span class="kr">import</span> <span class="nn">XMonad.Layout.Spacing</span>
+<span class="kr">import</span> <span class="nn">XMonad.Layout.Fullscreen</span>
+<span class="kr">import</span> <span class="nn">XMonad.Layout.NoBorders</span>
+<span class="kr">import</span> <span class="nn">XMonad.Layout.ResizableTile</span>
+
+<span class="kr">import</span> <span class="nn">XMonad.Actions.CycleWS</span> <span class="p">(</span><span class="nf">prevWS</span><span class="p">,</span> <span class="nf">nextWS</span><span class="p">)</span>
+
+<span class="kr">import</span> <span class="nn">System.IO</span></code></pre></div>
+
+
+<p>Put those <code>import</code> inside the dough we just made. Just input them. I don't really know what those code means myself. So we're good, kay..? After make some imports, I will set the workspace names. Like you can see below, that was the workspace names, and in that name display, i will include some icon.</p>
+
+<p><img src="/img/monad-ws.png" alt="monad workspace" /></p>
+
+<p>see? there are some icons included in workspace name. I use dzen2 as panel, so i will input some <code>^i(...)</code> into the workspace name. My icons are stored in <code>/home/yotsuba/.xmonad/xbm/</code> so i will make a shortcut to call them. It will be a pain in the ass if i input them literally for each name on the workspaces.</p>
+
+<div class="highlight"><pre><code class="language-hs" data-lang="hs"><span class="c1">-- lets just call the shortcut with &#39;i&#39; kay --</span>
+<span class="nf">i</span> <span class="ow">=</span> <span class="s">&quot; ^i(/home/yotsuba/.xmonad/xbm/&quot;</span>
+
+<span class="nf">myws</span> <span class="ow">::</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span>
+<span class="nf">myws</span> <span class="ow">=</span> <span class="n">clickable</span> <span class="o">$</span> <span class="p">[</span> <span class="n">i</span> <span class="o">++</span> <span class="s">&quot;term.xbm) TERM&quot;</span>
+                   <span class="p">,</span> <span class="n">i</span> <span class="o">++</span> <span class="s">&quot;cat.xbm) WEB&quot;</span>
+                   <span class="p">,</span> <span class="n">i</span> <span class="o">++</span> <span class="s">&quot;edit2.xbm) INFO&quot;</span>
+                   <span class="p">,</span> <span class="n">i</span> <span class="o">++</span> <span class="s">&quot;pacman2.xbm) FILE&quot;</span>
+                   <span class="p">,</span> <span class="n">i</span> <span class="o">++</span> <span class="s">&quot;diskette.xbm) WORK&quot;</span>
+                   <span class="p">]</span>
+       <span class="kr">where</span> <span class="n">clickable</span> <span class="n">l</span> <span class="ow">=</span> <span class="p">[</span> <span class="s">&quot;^ca(1,xdotool key super+&quot;</span> <span class="o">++</span> <span class="n">show</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">++</span> <span class="s">&quot;)&quot;</span> <span class="o">++</span> <span class="n">ws</span> <span class="o">++</span> <span class="s">&quot;^ca()&quot;</span> <span class="o">|</span>
+                           <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">ws</span><span class="p">)</span> <span class="ow">&lt;-</span> <span class="n">zip</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="p">]</span> <span class="n">l</span><span class="p">,</span> <span class="kr">let</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">i</span> <span class="p">]</span></code></pre></div>
+
+
+<p>Okay?</p>
+
+<p>So that's how we make some workspace. Next, i will make some keybindings to make my life easier.</p>
+
+<p>i dont know whats wrong but this jekyll engine take a foolish act again. fuck</p>
+
+            </div>
+            <div class="span4">
+            <div class="container-fluid">
+<div class="row-fluid">
+ <div class="span3">
+   <div class="well sidebar-nav sidebar-nav-fixed">
+    <h3>Poorly Written..</h3>
+       <p>I don't know. I'm starting this s-thing last night, and i'm still here, my eyes hurts.</p>
+       <p>so.. what is this? this. is for my personal blabbing and. fooking. and why? my Engrish is bad, and i don't do well in naratives.. just ask that <b>bipedal lizard</b> below</p>
+       <!--<br>-->
+    <!--<ul>
+        
+        <li><a href="/2014/07/14/im-documenting-what-ive-done/">I'm documenting what i've done</a></li>
+        
+        <li><a href="/2014/05/12/today-s-screenshot/">Today was a good day</a></li>
+        
+        <li><a href="/2014/03/24/it-s-been-so-long/">It's been so long</a></li>
+        
+        <li><a href="/2014/01/30/Loonix-Newfag/">Loonix Newfag Here!! And fuck you all (Bahasa)</a></li>
+        
+        <li><a href="/2014/01/11/testing/">Testing</a></li>
+        
+    </ul>-->
+   </div><!--/.well -->
+ </div><!--/span-->
+
+
+            </div>
+        </div>
+        <!--<div class="container-fluid">-->
+<!--<div class="row-fluid">-->
+ <div class="span5">
+   <div class="llew desibar-nav desibar-nav-fixed">
+   <p><a href="/about"><img src="/img/dino.png"></a></p>
+       <!--<br>-->
+    <!--<ul>
+        
+        <li><a href="/2014/07/14/im-documenting-what-ive-done/">I'm documenting what i've done</a></li>
+        
+        <li><a href="/2014/05/12/today-s-screenshot/">Today was a good day</a></li>
+        
+        <li><a href="/2014/03/24/it-s-been-so-long/">It's been so long</a></li>
+        
+        <li><a href="/2014/01/30/Loonix-Newfag/">Loonix Newfag Here!! And fuck you all (Bahasa)</a></li>
+        
+        <li><a href="/2014/01/11/testing/">Testing</a></li>
+        
+    </ul>-->
+<!--   </div><!--/.well -->
+<!-- </div><!--/span-->
+
+
