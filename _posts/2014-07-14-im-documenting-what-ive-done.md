@@ -99,6 +99,6 @@ mkeys =	[ ((mod4Mask, xK_Return), spawn "urxvt")
 
 {% endhighlight %}
 <br>
-I'm done with keybinds. I think that's all i need to make my life easier. If you look at the keybinds, there is `dmenu_run` amongs those code. Yes. it's `dmenu`. I included `dmenu` in those keybinds to make a good app launcher, because xmonad doesn't really have an embedded-launcher like awesome. Hmm, maybe.. because i don't really know myself.
+I'm done with keybinds. I think that's all i need to make my life easier. If you look at the keybinds, there is `dmenu_run` amongs those code. Yes. it's `dmenu`. I included `dmenu` in those keybinds to make a good app launcher, because xmonad doesn't really have an embedded-launcher like awesome. Hmm, maybe.. because i don't really know it myself.
 
 i dont know whats wrong but this jekyll engine take a foolish act again. fuck
