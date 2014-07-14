@@ -76,10 +76,29 @@ myws = clickable $ [ i ++ "term.xbm) TERM"
 			               (i,ws) <- zip [1..] l, let n = i ]
 
 {% endhighlight %}
+<br>
+Okay? <br>
+<br>
+So that's how we make some workspace. Next, i will make some keybindings to make my life easier. In this keybinds, is like adding some spoon or fork to the cake. So we can eat the cake easily without dirtying our hands. But, adding spoon or fork is at the end of making a cake, right? Fuck you, this ain't no cake. This is `monad`.
+{% highlight hs %}
+-- lets just call this mkeys --
+mkeys =	[ ((mod4Mask, xK_Return), spawn "urxvt")
+	       , ((mod4Mask, xK_Left), prevWS)
+	       , ((mod4Mask, xK_Right), nextWS)
+	       , ((mod4Mask, xK_Up), sendMessage MirrorExpand)
+	       , ((mod4Mask, xK_Down), sendMessage MirrorShrink)
+	       , ((mod4Mask, xK_r), spawn "dmenu_run -b")
+	       , ((mod4Mask .|. shiftMask, xK_r), spawn "killall dzen2 && xmonad --restart")
+	       -- sound and others --
+	       , ((mod4Mask .|. mod1Mask, xK_Up), spawn "amixer set Master 5%+")
+	       , ((mod4Mask .|. mod1Mask, xK_Down), spawn "amixer set Master 5%-")
+	       , ((0, xK_F9), spawn "mpc toggle")
+	       , ((0, xK_F11), spawn "mpc prev")
+	       , ((0, xK_F12), spawn "mpc next")
+	       ]
 
-Okay?
-
-So that's how we make some workspace. Next, i will make some keybindings to make my life easier.
-
+{% endhighlight %}
+<br>
+I'm done with keybinds. I think that's all i need to make my life easier. If you look at the keybinds, there is `dmenu_run` amongs those code. Yes. it's `dmenu`. I included `dmenu` in those keybinds to make a good app launcher, because xmonad doesn't really have an embedded-launcher like awesome. Hmm, maybe.. because i don't really know myself.
 
 i dont know whats wrong but this jekyll engine take a foolish act again. fuck

@@ -149,9 +149,30 @@ I will begin on costumizing some xmonad code. I have to code, in xmonad way, has
                            <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">ws</span><span class="p">)</span> <span class="ow">&lt;-</span> <span class="n">zip</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="p">]</span> <span class="n">l</span><span class="p">,</span> <span class="kr">let</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">i</span> <span class="p">]</span></code></pre></div>
 
 
-<p>Okay?</p>
+<p><br>
+Okay? <br>
+<br>
+So that's how we make some workspace. Next, i will make some keybindings to make my life easier. In this keybinds, is like adding some spoon or fork to the cake. So we can eat the cake easily without dirtying our hands. But, adding spoon or fork is at the end of making a cake, right? Fuck you, this ain't no cake. This is <code>monad</code>.</p>
 
-<p>So that's how we make some workspace. Next, i will make some keybindings to make my life easier.</p>
+<div class="highlight"><pre><code class="language-hs" data-lang="hs"><span class="c1">-- lets just call this mkeys --</span>
+<span class="nf">mkeys</span> <span class="ow">=</span> <span class="p">[</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> <span class="n">xK_Return</span><span class="p">),</span> <span class="n">spawn</span> <span class="s">&quot;urxvt&quot;</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> <span class="n">xK_Left</span><span class="p">),</span> <span class="n">prevWS</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> <span class="n">xK_Right</span><span class="p">),</span> <span class="n">nextWS</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> <span class="n">xK_Up</span><span class="p">),</span> <span class="n">sendMessage</span> <span class="kt">MirrorExpand</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> <span class="n">xK_Down</span><span class="p">),</span> <span class="n">sendMessage</span> <span class="kt">MirrorShrink</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> <span class="n">xK_r</span><span class="p">),</span> <span class="n">spawn</span> <span class="s">&quot;dmenu_run -b&quot;</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span> <span class="o">.|.</span> <span class="n">shiftMask</span><span class="p">,</span> <span class="n">xK_r</span><span class="p">),</span> <span class="n">spawn</span> <span class="s">&quot;killall dzen2 &amp;&amp; xmonad --restart&quot;</span><span class="p">)</span>
+           <span class="c1">-- sound and others --</span>
+           <span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span> <span class="o">.|.</span> <span class="n">mod1Mask</span><span class="p">,</span> <span class="n">xK_Up</span><span class="p">),</span> <span class="n">spawn</span> <span class="s">&quot;amixer set Master 5%+&quot;</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span> <span class="o">.|.</span> <span class="n">mod1Mask</span><span class="p">,</span> <span class="n">xK_Down</span><span class="p">),</span> <span class="n">spawn</span> <span class="s">&quot;amixer set Master 5%-&quot;</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">xK_F9</span><span class="p">),</span> <span class="n">spawn</span> <span class="s">&quot;mpc toggle&quot;</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">xK_F11</span><span class="p">),</span> <span class="n">spawn</span> <span class="s">&quot;mpc prev&quot;</span><span class="p">)</span>
+           <span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">xK_F12</span><span class="p">),</span> <span class="n">spawn</span> <span class="s">&quot;mpc next&quot;</span><span class="p">)</span>
+           <span class="p">]</span></code></pre></div>
+
+
+<p><br>
+I'm done with keybinds. I think that's all i need to make my life easier. If you look at the keybinds, there is <code>dmenu_run</code> amongs those code. Yes. it's <code>dmenu</code>. I included <code>dmenu</code> in those keybinds to make a good app launcher, because xmonad doesn't really have an embedded-launcher like awesome. Hmm, maybe.. because i don't really know myself.</p>
 
 <p>i dont know whats wrong but this jekyll engine take a foolish act again. fuck</p>
 
