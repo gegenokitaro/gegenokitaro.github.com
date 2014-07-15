@@ -83,20 +83,21 @@ v-collapse">
             <div class="span8">
             <h3>I'm Documenting what i've done</h3>
 
-<p>With that said, this time it's xmonad again. yeah, i'm doing xmonad all over my free time. it's not like i have much free time, but, it is. i've a lot of free time and i don't know what to do. I hang around my monad over and over again, and you can see, below is my current xmonad setting. probably not the best but i'm not really dissapointed with this one.</p>
-
-<p><img src="/img/nganggur11.png" alt="screen" /></p>
-
-<p>if, by any chance, you want to make your monad looks like this, i will give some tuts, a step-by-step tuts to build a dissapointing-monad just like in picture above. Okay, here are the ingredients to make monad like that, and everything in this cooking-like tutorial is optional, you can change anything to suits your taste except the important part.</p>
+<p>With that said, this time it's xmonad again. yeah, i'm doing xmonad all over my free time. it's not like i have much free time, but, it is. i've a lot of free time and i don't know what to do. I hang around my monad over and over again, and you can see, below is my current xmonad setting. probably not the best but i'm not really dissapointed with this one.
+<br><br>
+<img src="/img/nganggur11.png" alt="screen" />
+<br><br>
+if, by any chance, you want to make your monad looks like this, i will give some tuts, a step-by-step tuts to build a dissapointing-monad just like in picture above. Okay, here are the ingredients to make monad like that, and everything in this cooking-like tutorial is optional, you can change anything to suits your taste except the important part.</p>
 
 <pre><code>First, we need xmonad. I use both xmonad and xmonad-contrib.
 for terminal client, i use urxvt. you can use anything.
 panel, dzen2. those panel, in pink, is dzen2. i don't know how to do it besides using dzen2.
 music player, mpc + ncmpcpp. weechat, irc client. and so on.
 dmenu, for a launcher. so i can launch an app without much keybinding.
+compton, for compositing.
 
 summary:
-xmonad (xmonad-contrib) | dzen2 | urxvt | weechat | mpc + ncmpcpp (mpd) | dmenu
+xmonad (xmonad-contrib) | dzen2 | urxvt | weechat | mpc + ncmpcpp (mpd) | dmenu | compton
 </code></pre>
 
 <p><br>
@@ -129,11 +130,11 @@ I will begin on costumizing some xmonad code. I have to code, in xmonad way, has
 <span class="kr">import</span> <span class="nn">System.IO</span></code></pre></div>
 
 
-<p>Put those <code>import</code> inside the dough we just made. Just input them. I don't really know what those code means myself. So we're good, kay..? After make some imports, I will set the workspace names. Like you can see below, that was the workspace names, and in that name display, i will include some icon.</p>
-
-<p><img src="/img/monad-ws.png" alt="monad workspace" /></p>
-
-<p>see? there are some icons included in workspace name. I use dzen2 as panel, so i will input some <code>^i(...)</code> into the workspace name. My icons are stored in <code>/home/yotsuba/.xmonad/xbm/</code> so i will make a shortcut to call them. It will be a pain in the ass if i input them literally for each name on the workspaces.</p>
+<p>Put those <code>import</code> inside the dough we just made. Just input them. I don't really know what those code means myself. So we're good, kay..? After make some imports, I will set the workspace names. Like you can see below, that was the workspace names, and in that name display, i will include some icon.
+<br><br>
+<img src="/img/monad-ws.png" alt="monad workspace" />
+<br><br>
+see? there are some icons included in workspace name. I use dzen2 as panel, so i will input some <code>^i(...)</code> into the workspace name. My icons are stored in <code>/home/yotsuba/.xmonad/xbm/</code> so i will make a shortcut to call them. It will be a pain in the ass if i input them literally for each name on the workspaces.</p>
 
 <div class="highlight"><pre><code class="language-hs" data-lang="hs"><span class="c1">-- lets just call the shortcut with &#39;i&#39; kay --</span>
 <span class="nf">i</span> <span class="ow">=</span> <span class="s">&quot; ^i(/home/yotsuba/.xmonad/xbm/&quot;</span>
@@ -172,9 +173,150 @@ So that's how we make some workspace. Next, i will make some keybindings to make
 
 
 <p><br>
-I'm done with keybinds. I think that's all i need to make my life easier. If you look at the keybinds, there is <code>dmenu_run</code> amongs those code. Yes. it's <code>dmenu</code>. I included <code>dmenu</code> in those keybinds to make a good app launcher, because xmonad doesn't really have an embedded-launcher like awesome. Hmm, maybe.. because i don't really know it myself.</p>
+I'm done with keybinds. I think that's all i need to make my life easier. If you look at the keybinds, there is <code>dmenu_run</code> amongs those code. Yes. it's <code>dmenu</code>. I included <code>dmenu</code> in those keybinds to make a good app launcher, because xmonad doesn't really have an embedded-launcher like awesome. Hmm, maybe.. because i don't really know it myself.
+<br><br>
+The next thing is, to set the color in that workspace. I'll adjust the color. We can add as many colors to this section, maybe i'll add some, in case i want to change the color-theme. But in this case i'll go with white, black, grey, and pink.</p>
 
-<p>i dont know whats wrong but this jekyll engine take a foolish act again. fuck</p>
+<div class="highlight"><pre><code class="language-hs" data-lang="hs"><span class="c1">-- color shortcut --</span>
+<span class="nf">black</span> <span class="ow">=</span> <span class="s">&quot;#333333&quot;</span>
+<span class="nf">grey3</span> <span class="ow">=</span> <span class="s">&quot;#EEEEEE&quot;</span>
+<span class="nf">white</span> <span class="ow">=</span> <span class="s">&quot;#FFFFFF&quot;</span>
+<span class="nf">pink1</span> <span class="ow">=</span> <span class="s">&quot;#E38179&quot;</span></code></pre></div>
+
+
+<p><br>
+Done. Now we have some nice color set. Why grey3 and pink1? Because i like them 3 in 1. And what's left is to put that color set into the workspace. I'll make this section as clear as possible. So you can define your own color theme to suits your taste.</p>
+
+<div class="highlight"><pre><code class="language-hs" data-lang="hs"><span class="nf">logBar</span> <span class="n">h</span> <span class="ow">=</span> <span class="kr">do</span>
+    <span class="n">dynamicLogWithPP</span> <span class="o">$</span> <span class="n">tryPP</span> <span class="n">h</span>
+<span class="nf">tryPP</span> <span class="ow">::</span> <span class="kt">Handle</span> <span class="ow">-&gt;</span> <span class="kt">PP</span>
+<span class="nf">tryPP</span> <span class="n">h</span> <span class="ow">=</span> <span class="n">defaultPP</span>
+    <span class="p">{</span> <span class="n">ppOutput</span>            <span class="ow">=</span> <span class="n">hPutStrLn</span> <span class="n">h</span>
+    <span class="p">,</span> <span class="n">ppCurrent</span>           <span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">pink1</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+    <span class="p">,</span> <span class="n">ppVisible</span>           <span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="p">(</span><span class="n">grey3</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+    <span class="p">,</span> <span class="n">ppHidden</span>            <span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="p">(</span><span class="n">grey3</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+    <span class="p">,</span> <span class="n">ppHiddenNoWindows</span>   <span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">grey1</span><span class="p">)</span> <span class="p">(</span><span class="n">grey3</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+    <span class="p">,</span> <span class="n">ppUrgent</span>            <span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">blue1</span><span class="p">)</span> <span class="p">(</span><span class="n">grey3</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+    <span class="p">,</span> <span class="n">ppWsSep</span>             <span class="ow">=</span> <span class="s">&quot;&quot;</span>
+    <span class="p">,</span> <span class="n">ppOrder</span>             <span class="ow">=</span> <span class="nf">\</span><span class="p">(</span><span class="n">ws</span><span class="kt">:</span><span class="n">l</span><span class="kt">:</span><span class="n">t</span><span class="kt">:</span><span class="kr">_</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">ws</span><span class="p">]</span>
+    <span class="p">,</span> <span class="n">ppSep</span>               <span class="ow">=</span> <span class="s">&quot;   ^r(4x4)   &quot;</span>
+    <span class="p">,</span> <span class="n">ppLayout</span>            <span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="p">(</span><span class="n">grey3</span><span class="p">)</span> <span class="o">.</span>
+                          <span class="p">(</span> <span class="nf">\</span><span class="n">t</span> <span class="ow">-&gt;</span> <span class="kr">case</span> <span class="n">t</span> <span class="kr">of</span>
+                              <span class="s">&quot;Spacing 2 Tall&quot;</span> <span class="ow">-&gt;</span> <span class="s">&quot; &quot;</span> <span class="o">++</span> <span class="n">k</span> <span class="o">++</span> <span class="s">&quot;tile.xbm)  tile 4&quot;</span>
+                          <span class="p">)</span>
+    <span class="p">}</span>
+    <span class="kr">where</span> <span class="n">k</span> <span class="ow">=</span> <span class="s">&quot;^i(/home/yotsuba/.xmonad/ws/&quot;</span></code></pre></div>
+
+
+<p><br>
+How to color, is simple. When you define <code>dzenColor (a) (b) . pad</code>, <code>a</code> means the foreground color alias the font and the icon color. And <code>b</code> means the background color, so it will be like the picture earlier which is pink.</p>
+
+<p><code>ppCurrent</code> = It's the color of current workspace we're on. If you select the workspace, it will be pink-colored.</p>
+
+<p><code>ppVisible</code> = It's the color of visible workspace. Actually we can hide the workspace, but i didn't.</p>
+
+<p><code>ppHidden</code> = It's the workspaces other than current.</p>
+
+<p><code>ppHiddenNoWindows</code> = Like <code>ppHidden</code> with no active window in that workspace, or i can say a blank workspace.</p>
+
+<p><code>ppUrgent</code> = Workspace that have urgency.</p>
+
+<p><code>ppWsSep</code> = We can set the workspace separator, but i didn't set it and left it blank.</p>
+
+<p><code>ppOrder</code> = It's the order of this log. Actually we have 3 component which is <code>ws</code> as workspace, <code>l</code> as layouts, and <code>t</code> as title. Layouts is the layout of current workspace. And title is the title of current window. Like you can see, i only use the <code>ws</code>, so we can leave <code>l</code> and <code>t</code> alone for now.</p>
+
+<p><code>ppSep</code> = It's for the separator between <code>ws</code>, <code>l</code>, and <code>t</code>.</p>
+
+<p><code>ppLayout</code> = How the layouts should be displayed on screen. We can leave it just like that for now..
+<br><br></p>
+
+<p>I'm almost done. What's left for <code>xmonad</code> dough is the main class. In xmonad main class, i will set some layouts so i can change my current workspace's layout to suits the needs. In the import section, i included some layouts that i will use here. That's enough for layouts, so i will begin.</p>
+
+<div class="highlight"><pre><code class="language-hs" data-lang="hs"><span class="nf">myfn</span> <span class="ow">=</span> <span class="s">&quot;M+ 1m-9:Bold&quot;</span> <span class="c1">-- this where i set the font for panel. --</span>
+<span class="c1">-- layout --</span>
+<span class="nf">res</span> <span class="ow">=</span> <span class="kt">ResizableTall</span> <span class="mi">1</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="kt">[]</span> <span class="c1">-- part of layouts --</span>
+<span class="nf">ful</span> <span class="ow">=</span> <span class="n">noBorders</span> <span class="p">(</span><span class="n">fullscreenFull</span> <span class="kt">Full</span><span class="p">)</span>
+<span class="c1">-- for the main class --</span>
+<span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+    <span class="n">panel</span>  <span class="ow">&lt;-</span> <span class="n">spawnPipe</span> <span class="n">top</span> <span class="c1">-- this is the panel --</span>
+    <span class="n">panel2</span> <span class="ow">&lt;-</span> <span class="n">spawnPipe</span> <span class="s">&quot;sh /home/yotsuba/.xmonad/script/kananatas.sh&quot;</span> <span class="c1">-- &quot;second&quot; panel--</span>
+    <span class="n">xmonad</span> <span class="o">$</span> <span class="n">defaultConfig</span>
+        <span class="p">{</span> <span class="n">manageHook</span> <span class="ow">=</span> <span class="n">manageDocks</span> <span class="o">&lt;+&gt;</span> <span class="n">manageHook</span> <span class="n">defaultConfig</span>
+        <span class="p">,</span> <span class="n">layoutHook</span> <span class="ow">=</span> <span class="n">avoidStruts</span> <span class="p">(</span><span class="n">spacing</span> <span class="mi">2</span> <span class="o">$</span> <span class="n">layoutHook</span> <span class="n">defaultConfig</span> <span class="o">|||</span> <span class="n">res</span> <span class="p">)</span> <span class="o">|||</span> <span class="n">ful</span>
+        <span class="p">,</span> <span class="n">modMask</span> <span class="ow">=</span> <span class="n">mod4Mask</span>
+        <span class="p">,</span> <span class="n">focusedBorderColor</span> <span class="ow">=</span> <span class="s">&quot;#ffffff&quot;</span>
+        <span class="p">,</span> <span class="n">normalBorderColor</span> <span class="ow">=</span> <span class="s">&quot;#ffffff&quot;</span>
+        <span class="p">,</span> <span class="n">borderWidth</span> <span class="ow">=</span> <span class="mi">4</span>
+        <span class="p">,</span> <span class="n">workspaces</span> <span class="ow">=</span> <span class="n">myws</span>
+        <span class="p">,</span> <span class="n">terminal</span> <span class="ow">=</span> <span class="s">&quot;urxvt&quot;</span>
+        <span class="p">,</span> <span class="n">startupHook</span> <span class="ow">=</span> <span class="n">setWMName</span> <span class="s">&quot;LG3D&quot;</span> <span class="c1">-- for netbeans sake, i change the name --</span>
+        <span class="p">,</span> <span class="n">logHook</span> <span class="ow">=</span> <span class="n">logBar</span> <span class="n">panel</span>
+        <span class="p">}</span> <span class="p">`</span><span class="n">additionalKeys</span><span class="p">`</span> <span class="n">mkeys</span>
+        <span class="kr">where</span> <span class="n">top</span> <span class="ow">=</span> <span class="s">&quot;dzen2 -p -ta l -e &#39;button3=&#39; -fn &#39;&quot;</span> 
+                    <span class="o">++</span> <span class="n">myfn</span> <span class="o">++</span> <span class="s">&quot;&#39; -fg &#39;&quot;</span> <span class="o">++</span> <span class="n">black</span> <span class="o">++</span> <span class="s">&quot;&#39; -bg &#39;&quot;</span> <span class="o">++</span> <span class="n">grey3</span> <span class="o">++</span> <span class="s">&quot;&#39; -w 400&quot;</span>
+                    <span class="o">++</span> <span class="s">&quot; -h 22 &quot;</span></code></pre></div>
+
+
+<p><br>
+I use dzen2 for the panel. And maybe you notice "second" panel in my config. That's the right-side panel. It looks like there's only one panel, actually there are two panels side by side. The left one is the <code>log</code> panel to show workspace and others from xmonad system, and the right one is the <code>complimentary</code> panel that can be used for anything. We actually can input anything, any information, or just some random text to that <code>complimentary</code> panel. In my screenshot above, i put <code>date</code> and my up-down speed. Interesting, eh..?</p>
+
+<p>The main dish is ready to serve. Monad-cake can be used now, i hope it's delish.
+<br>
+<br>
+<br></p>
+
+<h4>So we're done?</h4>
+
+<p>Nope. There's still a lot to make. Next we will proceed to the topping. By topping, i mean the <code>complimentary</code> panel. So, what do we have here..? Hmm.. let me see.. i have.. hmmm... Oh, i have <code>conky</code>. I don't use it often but i think i'm gonna use it here, for the topping. I think i can make something from this <code>conky</code>. Hmmm... maybe <code>upspeedf</code> and <code>downspeedf</code> from <code>conky</code> will do the trick. And <code>date</code> too, i think it will be great just for this two functions.</p>
+
+<p>Okay, let's move to conky. What i'm trying to do is make an output from <code>conky</code> and pipe it to <code>dzen2</code>. Now, i will set the dzen2-script first. I'll move to <code>~/.xmonad/script/</code> and make the script for <code>complimentary</code> panel. It will be <code>kananatas.sh</code> because i've already set it like that in my monad config. Let's cook.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">fn</span><span class="o">=</span><span class="s2">&quot;M+ 1m-9:Bold&quot;</span>   <span class="c">#i set the same font like the main panel from xmonad</span>
+<span class="nv">obg</span><span class="o">=</span><span class="s2">&quot;#eeeeee&quot;</span>       <span class="c">#yay for background</span>
+<span class="nv">ofg</span><span class="o">=</span><span class="s2">&quot;#333333&quot;</span>       <span class="c">#yay for foreground</span>
+
+conky -c /home/yotsuba/.xmonad/script/okanan.conkyrc 
+<span class="p">|</span> dzen2 -p -ta r -x <span class="m">400</span> -h <span class="m">22</span> -w <span class="m">966</span> -fn <span class="s2">&quot;$fn&quot;</span> -bg <span class="s2">&quot;$obg&quot;</span> -fg <span class="s2">&quot;$ofg&quot;</span></code></pre></div>
+
+
+<p><br>
+<code>dzen2</code> have some functions, like <code>-x</code> to adjust the x axis position of <code>dzen2</code> and <code>-y</code> for the y axis. <code>-w</code> is for the width, <code>-h</code> for the height, <code>-fn</code> font, <code>-bg</code> background color, <code>-fg</code> foreground, and so on. You can always read them at dzen2 official page or it's github page.</p>
+
+<p>If you see the script, i <code>conky</code>-ing the input for <code>dzen2</code>. That means, <code>conky</code> will produce the output and i'm piping it to <code>dzen2</code>. Okay, let's move to the <code>conky</code> config.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">background no
+out_to_console yes
+out_to_x no
+update_interval 0.5
+total_run_times 0
+use_spacer none</code></pre></div>
+
+
+<p><br>
+and now i will make the input.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">TEXT
+^fg<span class="o">(</span><span class="se">\#</span>E38179<span class="o">)</span>^i<span class="o">(</span>/home/yotsuba/.xmonad/xbm/uparrow1.xbm<span class="o">)</span>^fg<span class="o">()</span> <span class="se">\</span>
+<span class="k">${</span><span class="nv">upspeedf</span><span class="p"> wlp6s0</span><span class="k">}</span>  <span class="se">\</span>
+^fg<span class="o">(</span><span class="se">\#</span>E38179<span class="o">)</span>^i<span class="o">(</span>/home/yotsuba/.xmonad/xbm/downarrow1.xbm<span class="o">)</span>^fg<span class="o">()</span> <span class="se">\</span>
+<span class="k">${</span><span class="nv">downspeedf</span><span class="p"> wlp6s0</span><span class="k">}</span>  <span class="se">\</span>
+^bg<span class="o">(</span><span class="se">\#</span>e38179<span class="o">)</span>  <span class="se">\</span>
+^fg<span class="o">(</span><span class="se">\#</span>ffffff<span class="o">)</span><span class="se">\</span>
+<span class="k">${</span><span class="nv">exec</span><span class="p"> date +</span><span class="s2">&quot;%a, %b-%d %H:%M&quot;</span><span class="p"> | tr </span><span class="s1">&#39;[:lower:]&#39;</span><span class="p"> </span><span class="s1">&#39;[:upper:]&#39;</span><span class="k">}</span>  <span class="se">\</span></code></pre></div>
+
+
+<p><br>
+Here is the result.
+<br>
+<br>
+<img src="/img/monad-comp.png" alt="monad-com" />
+<br>
+<br></p>
+
+<h4>What's more?</h4>
+
+<p><br>
+i dont know whats wrong but this jekyll engine take a foolish act again. fuck</p>
 
             </div>
             <div class="span4">
