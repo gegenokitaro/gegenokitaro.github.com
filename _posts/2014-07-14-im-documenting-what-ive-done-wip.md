@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "I'm documenting what i've done"
+title: "I'm documenting what i've done (WIP)"
 description: ""
 category: 
 tags: []
