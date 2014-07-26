@@ -39,7 +39,7 @@ body {
 	padding-top: 14px;
 	padding-bottom: 14px;
 	margin: 0 auto;
-	height: 686px;
+	height: 600px;
 }
 
 #mugi .desc {
@@ -51,15 +51,45 @@ body {
 	/*text-align: center;*/
 }
 
+#mugi .preview {
+	position: relative;
+	height: 519px;
+	margin: 0 20px 0 20px;
+}
+
 #mugi img {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
+	border-radius: 2px;
+	margin-bottom: -4px;
 	border: 1px solid #e2e4e7;
 }
 
-#mugi .preview {
-	position: relative;
-	height: 500px;
-	margin: 0 20px 0 20px;
+#mugi h2 {
+	position: absolute;
+	display: block;
+	width: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	padding: 0;
+	margin: 0;
+	border-radius: 2px;
+
+	text-align: center;
+	font-size: 40px;
+	font-weight: 700;
+	background: rgba(255,255,255,0.7);
+	border: 1px solid #dcdde0;
+	color: #107d88;
+	transition: all 0.2s ease 0s;
+
+	line-height: 517px;
 }
+
+#mugi a:hover h2 {
+	opacity: 1;
+	transition: all 0.2s ease 0s;
+}
+
