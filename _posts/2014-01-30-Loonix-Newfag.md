@@ -3,7 +3,7 @@ title: Loonix Newfag Here!! And fuck you all (Bahasa)
 layout: default
 ---
 
-##Baru di dunia Loonix? Baca!! 
+###Baru di dunia Loonix? Baca!! 
 Buat para pendatang baru di dunia open source, khususnya pada bidang per-kernel-an linux, baca ya. Biar ga tersesat di tengah kerasnya jalan yang penuh konak dan duri, berlumpur dan berpasir. Jangan sok dulu ya, tulisan berikut ini bukan sok menggurui, tapi cuman uneg-uneg pemisuh (baca: penulis) buat bocah-bocah kemaren sore yang belom ngerti susahnya maintenance mesin mu sendiri.
 
 Kenapa penuh dengan nada kebencian? Well, kalo dianggap ini menggunakan nada kebencian, ya, saya ga munafik. Saya benci kalian. Saya benci manusia. Karena itu, didasari oleh rasa kebencian yang teramat sangat ini, saya mau menyampaikan sesuatu supaya kalian bisa paling enggak meminimalisir sinyal kebencian yang terpancar dari tubuhmu. Biar saya ga benci-benci amat sama kalian.

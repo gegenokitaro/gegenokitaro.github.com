@@ -5,14 +5,12 @@ description: ""
 category: 
 tags: []
 ---
-{% include JB/setup %}
-
-### I'm Documenting what i've done
 
 With that said, this time it's xmonad again. yeah, i'm doing xmonad all over my free time. it's not like i have much free time, but, it is. i've a lot of free time and i don't know what to do. I hang around my monad over and over again, and you can see, below is my current xmonad setting. probably not the best but i'm not really dissapointed with this one.
 <br><br>
 ![screen](/img/nganggur11.png)
 <br><br>
+{% include JB/setup %}
 if, by any chance, you want to make your monad looks like this, i will give some tuts, a step-by-step tuts to build a dissapointing-monad just like in picture above. Okay, here are the ingredients to make monad like that, and everything in this cooking-like tutorial is optional, you can change anything to suits your taste except the important part. 
 
 	First, we need xmonad. I use both xmonad and xmonad-contrib.

@@ -1,47 +1,48 @@
 ---
 layout: default
+title: Journal, etc
 ---
 
-{% for post in site.posts limit: 20 %}
+<!--{% for post in site.posts limit: 20 %}
 <div class="row-fluid">
-  <div class="span13">
+  <div class="span13">-->
     <!--<h2>{{ post.title }}</h2>--> 
     <!--<h4>{{ post.date | date_to_long_string }}</h4>-->
-       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+       <!--<li> <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   </div>
 </div>
 {% endfor %}
-<div class="row-fluid">
-  <div class="span12">
-    <div class="pagination">
-      <ul>
-        {% if paginator.previous_page %}
-          {% if paginator.previous_page == 1 %}
-          <li><a href="/">Prev</a></li>
-          {% else %}
-          <li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
-          {% endif %}
-        {% else %}
-        <li><span class="disabled">Prev</span></li>
-        {% endif %}
-        {% if paginator.page == 1 %}
-        <li><span class="active">1</span></li>
-        {% else %}
-        <li><a href="/">1</a></li>
-        {% endif %}
-        {% for count in (2..paginator.total_pages) %}
-          {% if count == paginator.page %}
-          <li><span class="active">{{ count }}</span></li>
-          {% else %}
-          <li><a href="/page{{ count }}">{{ count }}</a></li>
-          {% endif %}
-        {% endfor %}
-        {% if paginator.next_page %}
-        <li><a href="/page{{ paginator.next_page }}">Next</a></li>
-        {% else %}
-        <li><span class="disabled">Next</span></li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
+-->
+
+{% for post in paginator.posts %}
+
+<div id="frontmenu">
+
+    {% assign d = post.date | date: "%d" | plus:'0' %}
+    {{ post.date | date: "%B" }}
+    {% case d %}
+    {% when 1 or 21 or 31 %}{{ d }}st,
+    {% when 2 or 22 %}{{ d }}nd,
+    {% when 3 or 23 %}{{ d }}rd,
+    {% else %}{{ d }}th,
+    {% endcase %}
+    {{ post.date | date: "%Y" }}
+
+  <h2>
+    <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+  </h2>
+
+    {% if post.fullview %}
+    {{ post.content }}
+    {% else %}
+    {% if post.shortinfo %}
+    {{ post.shortinfo }}
+    {% elsif post.description %}
+    {{ post.description }}
+    {% else %}
+    {{ post.excerpt }}
+    {% endif %}
+    {% endif %}
+
 </div>
+{% endfor %}
