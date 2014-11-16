@@ -57,6 +57,11 @@ body{
 	max-width: 40%;
 }
 
+#frontmenu a:hover{
+	color: #3FA9E3;
+	text-decoration: none;
+}
+
 greet{
 	font-family: 'Ubuntu', sans-serif;
 	color: #FFFFFF;
