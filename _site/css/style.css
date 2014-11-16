@@ -16,6 +16,11 @@ body{
 	color: #f1f1f1;
 }
 
+#sidebar .ico{
+	margin-top: -10px;
+	letter-spacing: 5px;
+}
+
 #title{
 	font-family: 'Ubuntu', sans-serif;
 	position: relative;
@@ -51,6 +56,7 @@ greet{
 	font-family: 'Ubuntu', sans-serif;
 	color: #FFFFFF;
 	font-size: 30px;
+	text-shadow: 4px 4px #22343C;
 }
 
 h2{
