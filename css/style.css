@@ -50,6 +50,11 @@ body{
 	background: #E7EEF3;
 	padding: 5px;
 	padding-left: 10px;
+	padding-right: 80px;
+}
+
+#frontmenu img{
+	max-width: 40%;
 }
 
 greet{

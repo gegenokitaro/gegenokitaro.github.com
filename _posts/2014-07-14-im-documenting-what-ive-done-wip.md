@@ -1,12 +1,12 @@
 ---
 layout: default
 title: "I'm documenting what i've done (WIP)"
-description: ""
 category: 
 tags: []
 ---
 
 With that said, this time it's xmonad again. yeah, i'm doing xmonad all over my free time. it's not like i have much free time, but, it is. i've a lot of free time and i don't know what to do. I hang around my monad over and over again, and you can see, below is my current xmonad setting. probably not the best but i'm not really dissapointed with this one.
+
 <br><br>
 ![screen](/img/nganggur11.png)
 <br><br>

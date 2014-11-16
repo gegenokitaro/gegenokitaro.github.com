@@ -1,13 +1,11 @@
 ---
 layout: default
 title: It's been so long
-description: ""
 category:
 tags: []
 ---
 {% include JB/setup %}
-## Long time no see...
-
+### Long time no see...
 Okay, long time no see. and farewell. bye.
 
 Just kidding, actually i'm working on a small icon set, which i use as my dock icon recently. My icon set, this time, will use .svg file instead some low quality .png which rather comes with disappointment. 
