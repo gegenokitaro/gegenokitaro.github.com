@@ -1,0 +1,28 @@
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#main {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main h1 {
+	font-family: 'Oswald', sans-serif;
+	color: #3F6D72;
+}
+
+#main desc {
+	line-height: 5px;
+	color: #505050;
+}
+
+#main img {
+	width: 100%;
+	margin: 20px auto;
+	border: 1px solid #e2e4e7;
+	position: relative;
+}
