@@ -13,8 +13,8 @@
 	<a href="https://github.com/gegenokitaro/Kyun">see on github</a>
 	</span>
 	<img src="assets/preview.png"></img>
-	<a data-scroll data-options='{ "easing": "easeInQuad" }' href="#content">Next</a>	
-	<h1 id="content">GTK and Metacity Theme</h1>
+	<a data-scroll data-options='{ "easing": "easeOutCubic" }' href="#content">Next</a>
+	<h2 id="content">GTK and Metacity Theme</h2>
 	<desc>More than flat theme for GTK3 and Metacity theme for Gnome Shell</desc>
 	<br style="clear:both;"/>
 	<div class="showcase-left">
@@ -26,10 +26,15 @@
 	<br>
 	<img src="assets/metacity.png"></img>
 </div>
+<!--<div id="footer">
+	<a href="#section">next</a>
+</div>-->
 <!-- Javascript -->
 	<script src='js/bind-polyfill.js'></script>
 	<script src='js/smooth-scroll.js'></script>
 	<script>
+		conter = 0;
+		var anchor=["#content", "#header"];
 		smoothScroll.init({
 			speed: 1000,
 			easing: 'easeInOutCubic',
