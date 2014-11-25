@@ -2,26 +2,41 @@
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="style.css" rel="stylesheet" type="text/css">	
 </head>
 <body>
 
 <div id="main">
 	<span id="header">
 	<h1>Kyun</h1>
-	<desc>A minimal theme for Gnome Shell and GTK</desc>
+	<desc>A minimal theme for Gnome Shell and GTK</desc><br>
+	<a href="https://github.com/gegenokitaro/Kyun">see on github</a>
 	</span>
 	<img src="assets/preview.png"></img>
+	<a data-scroll data-options='{ "easing": "easeInQuad" }' href="#content">Next</a>
+	<h1 id="content">GTK and Metacity Theme</h1>
+	<desc>More than flat theme for GTK3</desc>
+	<br style="clear:both;"/>
+	<div class="showcase-left">
+		<img src="assets/show-rhythmbox.png"></img>
+	</div>
+	<div class="showcase-right">
+		<img src="assets/show-nautilus.png"></img>
+	</div>
+	<desc> testing </desc>
 </div>
-
-<!--<a data-scroll href="#scroll">Boom</a>
-<span id="scroll">test</span>-->
-
-
-
-<script href="js/smooth-scroll.js"></script>
-<script>
-	smoothScroll.init():
-</script>
+<!-- Javascript -->
+	<script src='js/bind-polyfill.js'></script>
+	<script src='js/smooth-scroll.js'></script>
+	<script>
+		smoothScroll.init({
+			speed: 1000,
+			easing: 'easeInOutCubic',
+			offset: 0,
+			updateURL: true,
+			callbackBefore: function ( toggle, anchor ) {},
+			callbackAfter: function ( toggle, anchor ) {}
+		});
+	</script>
 </body>
 </html>
