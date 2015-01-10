@@ -44,7 +44,7 @@ Setelah saya cari-cari, ternyata memang DE itu adalah lingkungan desktop yang sa
 
 Cuplikan cerita diatas itu mungkin pernah kita alami, dengan berbagai macam variasi simpulan dan petualangan. Dengan adanya forum, grup, komunitas, dll memang kita dimudahkan untuk saling berbagi ilmu dan bertanya. Namun, jangan lah sampai kita jadi `vampire` dalam suatu komunitas, dengan menanyakan hal-hal sepele yang seharusnya dapat digali informasinya secara mandiri.
 
-`Idiot Guide to Mod` merupakan salah satu cara saya untuk mengkritik fenomena yang sering terjadi dalam sebuah komunitas. Dengan adanya kritik ini, saya juga memiliki tanggung jawab atas sebuah solusi atas kritik saya. Karena itu, berikut ini solusi-solusi yang saya tawarkan atas permasalahan diatas. Solusi saya ini lebih banyak bersifat teknis, karena itu, silahkan dikritik kembali.
+`Idiot Guide to Desktop Modding` merupakan salah satu cara saya untuk mengkritik fenomena yang sering terjadi dalam sebuah komunitas. Dengan adanya kritik ini, saya juga memiliki tanggung jawab atas sebuah solusi atas kritik saya. Karena itu, berikut ini solusi-solusi yang saya tawarkan atas permasalahan diatas. Solusi saya ini lebih banyak bersifat teknis, karena itu, silahkan dikritik kembali.
 
 Apa itu desktop modding?
 
