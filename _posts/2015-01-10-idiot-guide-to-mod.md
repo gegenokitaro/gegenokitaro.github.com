@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Idiot guide to Mod (Bahasa)"
+title: "Idiot guide to Desktop Modding (Bahasa)"
 description: ""
 category: 
 tags: []
@@ -28,12 +28,12 @@ Apa maksudnya ini semua? Saya jadi makin bingung... Apa itu DE, apa itu conky, n
 Akhirnya, saya memutuskan untuk bertapa sejenak. Saya kudu cari-cari sendiri apa maksud dari semua ini. Oke, baiklah, pertama-tama, saya kudu belajar bahasa Inggris. Kebetulan saya pake Ubuntu, dan desktop nya ya gitu-gitu aja. Apa nama desktop ini? Google dulu ah..
 
 <br>
-![ubuntu default desktop](/img/ubuntudefaultdesktop.png)
+<img src="/img/ubuntudefaultdesktop.png" style="border: 2px solid #6f6f6f">
 
 Oh namanya Unity ternyata. Bentar-bentar.. apa itu unity? Kudu googling dulu, paling enggak mampir ke wikipedia.
 
 <br>
-![Unity (user interface)](/img/unityuserinterface.png)
+<img src="/img/unityuserinterface.png" style="border: 2px solid #6f6f6f">
 
 <br>
 Ih.. tambah bingung.. gimana ini.. Santai, jangan panik dulu. Kata google, Unity itu default desktop environment nya Ubuntu. Desktop Environment. Desktop Environment, kok kayaknya familiar ya.. bentar, kalo disingkat, berarti jadi.. DE! Ya, DE!! ada komen di pertanyaan saya yang jawabannya ganti DE. Apakah DE itu maksudnya adalah seperti yang saya maksud? Coba cari dulu ah di google.
