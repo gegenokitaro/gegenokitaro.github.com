@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Idiot guide to Desktop Modding (Bahasa)"
-description: ""
+description: "Ya kalo mau modding desktop itu <i>mbok</i> ya yang nyadar diri toh.."
 category: 
 tags: []
 ---
@@ -48,12 +48,14 @@ Cuplikan cerita diatas itu mungkin pernah kita alami, dengan berbagai macam vari
 
 Apa itu desktop modding?
 
-Menurut saya sendiri,desktop modding adalah suatu usaha untuk memperindah suatu tampilan yang kita gunakan. Modding sendiri memerlukan beberapa skill teknis untuk dapat menghasilkan suatu karya yang dapat diterima dengan baik.
+Menurut saya sendiri, desktop modding adalah suatu usaha untuk memperindah suatu tampilan yang kita gunakan. Modding sendiri memerlukan beberapa skill teknis untuk dapat menghasilkan suatu karya yang dapat diterima dengan baik.
 
 Untuk para pendatang baru, harus mulai darimana?
-
+<br>
+<br>
 <b>1. Kenali mesin yang anda pakai.</b>
-
+<br>
+<br>
 Mulai dari DE (Desktop Environment), aplikasi yang dipakai, cara <i>theming</i>, dll. Bagaimana kita bisa memodifikasi Desktop Environment yang kita pakai kalau kita sendiri belum tahu apa itu Desktop Environment.
 
 <b>DE</b> menurut saya merupakan suatu kumpulan dari berbagai macam aplikasi yang saling membangun untuk menciptakan suatu lingkungan desktop yang layak dihuni. Tapi, apakah pengertian seperti ini yang dibutuhkan dalam desktop modding? Sedikit ya, dan kebanyakan tidak. Untuk pertama kalinya desktop modding, pengetahuan tentang DE yang dibutuhkan adalah pengetahuan tentang macam-macam DE. Apa saja macam-macam DE dan bagaimana tampilannya. Itu. Itu yang perlu diketahui. Jadi kita bisa membandingkan mana DE yang paling bagus dan mulai mendalami nya. 
@@ -70,13 +72,33 @@ Misal seperti ini.
 	running apps ~ Rhythmbox, Gcolor3, Urxvt
 
 Bisa kita lihat disana menggunakan `Gnome-shell`, `plank` sebagai dock, dan aplikasi-aplikasi yang ditunjukkan adalah `Rhythmbox`, `Gcolor3` dan `Rxvt-Unicode`. Tau darimana? dari keterangannya kan? Dari situ kita bisa mempelajari bagian-bagian dari sebuah desktop. Dari keterangan tersebut kita bisa mulai mencari dan mempelajari desktop modding. Karena itu, jika anda memiliki kelebihan dalam hal desktop modding, jangan lupa cantumkan sedetail mungkin keterangan tentang desktop anda. Itu sangat berguna bagi kami para newbie.
-
+<br>
+<br>
 <b>2. Do it yourself.</b>
-
+<br>
+<br>
 Saya sering <i>jalan-jalan</i> ke DeviantArt dan menemukan karya seni yang epic, misal, sebuah konfigurasi `conky` yang sangat memukau untuk dipasang di desktop. Apa itu conky? Saya sendiri masih belum tahu apa itu conky, sedangkan pada <i>screenshot</i> yang ditunjukkan di DeviantArt, jelas-jelas itu sangat indah. Dari kata kunci ini: `conky`, kita bisa mulai mencari apa dan bagaimana sebuah conky itu. Apa conky itu dan bagaimana cara memasangnya. Oke, setelah mencari beberapa saat, saya menemukan cara untuk memasang conky. Dengan `conky -c /path/to/conky/config` saya dapat memunculkan conky di desktop saya. Semudah itu? Ya, semudah itu. Dengan adanya `conky manager`, hal tersebut malah membuat semua makin mudah. Sekali lagi, dengan adanya kata kunci `conky manager`, kita dapat mencari dan memahami apa itu conky manager. Mungkin, dalam praktis nya, kita akan menemui berbagai permasalahan. Jangan panik. Dengan berbekal kata kunci yang ada, kemungkinan besar permasalahan tersebut akan terpecahkan apabila kita mau berusaha.
 
 Contoh kasus diatas merupakan salah satu dari sekian banyak kasus yang sering kita hadapi dalam desktop modding. Pintar-pintarlah mencari kata kunci. 
+<br>
+<br>
+<b>3. Malu bertanya, biar mandiri.</b>
+<br>
+<br>
+Ada peribahasa "malu bertanya, sesat di jalan", memang bener adanya. Tapi kalo tanya terus itu namanya nda tau malu. Misal kayak gini, suatu ketika ada orang posting screenshot yang keren. Terjadilah percakapan di bagian <i>comment</i>. <br>
 
+    Watcher : Gan, itu player music nya pake apa?
+    Poster  : ncmpcpp gan. 
+    Watcher : gimana cara pasangnya gan? << uda gejala ga tau malu 
+    Poster  : install aja mpd sama ncmpcpp. 
+    Watcher : gimana cara nginstallnya gan? saya pake kali linux << hacker wannabe 
+    Poster  : sudo apt-get install mpd ncmpcppp 
+    Watcher : tetep ga bisa nampilin lagu gan. << uninstall kali linux -> install windows 
+    Poster  : ... <br>
+    
+See? Oleh karena hal tersebut, kita kudu punya malu. Malu bertanya, biar bisa mandiri. At least ada usaha tanpa menggantungkan orang lain. Saya pribadi menganggap para desktop modder diluar sana yang bisa nyiptain tema, icon set, bisa bikin desktop yang keren, itu adalah <i>hacker</i>. Definisi `hacker` itu luas. Nda cuman berkutat disekitaran `penetration` atau `web dev`. Jadi, kalo pengen jadi <i>hacker</i> yang keren, dari awal kudu punya semangat <i>hacker</i> juga. Balik lagi ke masalah "malu bertanya, sesat di jalan". Coba lah punya sedikit malu dalam bertanya. Kurangi kegiatan menanyakan hal-hal umum yang sama yang selalu ditanyakan orang-orang <i>awam</i>. Katanya mau jadi <i>hacker</i>, kok mentalnya masi <i>orang awam</i>. Malu bertanya, selain dapat memunculkan kemandirian, bisa juga untuk menghindari <i>bullying</i>. 
+
+Ngomong-ngomong tentang <i>bullying</i>, menurut saya banyak faktor yang menyebabkan seseorang jadi target <i>bullying</i> ataupun seseorang jadi ada niat untuk melakukan <i>bullying</i>. Salah satu faktornya ya karena kurang malu dalam bertanya. Ilmu pengetahuan itu nda gratis. Untuk bisa dapat ilmu pengetahuan, kita harus <i>bayar</i>. Bayar nya bisa dalam bentuk apapun. Bisa dalam bentuk `mental-currency`, yaitu keadaan psikis ketika di-<i>bully</i>, ataupun dalam bentuk `time-currency`, hilangnya waktu dalam hidup kita untuk mempelajari hal baru secara mandiri. Kalo saya pribadi, saya lebih memilih untuk menggunakan `time-currency`. Karena faktor ekonomi secara finansial saya kurang mampu, dan secara perhitungan matematis, `mental-currency` saya anggap kurang mampu untuk <i>membeli</i> suatu ilmu. Udah bayar, eh ga dapet ilmu, gitu biasanya. Jadinya saya lebih banyak <i>browsing</i> secara mandiri supaya saya bisa menguasai suatu teknik tertentu. Kalo anda, pilih mana?
 <br>
 <br>
 <br>
