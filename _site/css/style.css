@@ -1,12 +1,12 @@
 body{
 	margin: 0;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'Droid Sans', sans-serif;
 }
 
 #sidebar{
 	position: fixed;
 	line-height: 30px;
-	background-color: #354F5B;
+	background-color: #7A9497;
 	/*background-color: #659696;*/
 	width: 340px;
 	height: 100%;
@@ -23,7 +23,7 @@ body{
 }
 
 #title{
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Droid Sans', sans-serif;
 	position: relative;
 	margin-left: 380px;
 	margin-right: 20px;
@@ -32,7 +32,7 @@ body{
 }
 
 #section{
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Droid Sans', sans-serif;
 	font-size: 16px;
 	margin-left: 380px;
 	position: relative;
@@ -70,10 +70,10 @@ body{
 }
 
 greet{
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Droid Sans', sans-serif;
 	color: #FFFFFF;
 	font-size: 30px;
-	text-shadow: 4px 4px #22343C;
+	/*text-shadow: 4px 4px #22343C;*/
 }
 
 h2{
