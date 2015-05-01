@@ -1,6 +1,6 @@
 ---
 title: Loonix Newfag Here!! And fuck you all (Bahasa)
-layout: default
+layout: post
 ---
 
 ###Baru di dunia Loonix? Baca!! 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "I'm documenting what i've done (not WIP anymore)"
 category: 
 tags: []

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Today was a good day
 category:
 tags: []

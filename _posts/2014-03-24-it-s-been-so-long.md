@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: It's been so long
 category:
 tags: []
