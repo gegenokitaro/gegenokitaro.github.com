@@ -76,7 +76,9 @@ Maybe, in the future, I can rewrite that generator app and make it more interact
 
 Here is the (useless) App that I've wrote.
 
-![uA-2](/img/uA-2.png) ![uA-3](/img/uA-3.png)
+<div id="mini">
+<img src="/img/uA-2.png"><img src="/img/uA-3.png">
+</div>
 
 It's useless, but I still use it to make a theme for my openbox in my laptop. So even the useless thing somewhat have a meaning.
 

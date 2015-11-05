@@ -1,48 +1,88 @@
 body{
 	margin: 0;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 }
 
 #sidebar{
 	position: fixed;
 	line-height: 30px;
-	background-color: #7A9497;
-	/*background-color: #659696;*/
-	width: 340px;
-	height: 100%;
+	background-image: url("/img/sidebar_1.jpg");
+	/*background-color: #7A9497;*/
+	width: 15%;
+	height: 450px;
+	border: 1px solid #cfcfcf;
+	border-radius: 10px;
 	float: left;
-	padding: 10px;
-	padding-top: 50px;
+	margin-top: 5%;
+	margin-left: 5%;
 	text-align: center;
 	color: #f1f1f1;
 }
 
+#sidebar a,
+#sidebar a:hover,
+#sidebar a:link,
+#sidebar a:visited,
+#sidebar a:active {
+	text-decoration: none;
+	color: #f1f1f1;
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
 #sidebar .ico{
-	margin-top: -10px;
+	margin-top: 250px;
 	letter-spacing: 5px;
 }
 
-#title{
-	font-family: 'Droid Sans', sans-serif;
+#sidebar span {
+	background-color: #5A9B79;
+	width: 100%;
+	display: block;
+	margin-top: 10px;
+}
+
+#sidebar .ico span {
+	width: 100%;
+	display: block;
+	margin-top: 4px;
+}
+
+#content {
+	margin: 30px auto;
 	position: relative;
+	width: 50%;
+	padding: 10px;
+	background: #ffffff;
+	border: 2px solid #cfcfcf;
+}
+
+#title{
+	font-family: 'PT Sans', sans-serif;
+	/*position: relative;
 	margin-left: 380px;
-	margin-right: 20px;
+	margin-right: 20px;*/
 	padding: 10px;
 	border-bottom: 1px solid #e1e1e1;
 }
 
 #disqus_thread,
 #section{
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 16px;
-	margin-left: 380px;
+	/*margin-left: 380px;*/
 	position: relative;
-	width: calc(100% - 460px);
+	/*width: calc(100% - 460px);
 	width: -moz-calc(100% - 460px);
 	width: -webkit-calc(100% - 460px);
-	float: left;
+	float: left;*/
 	padding: 10px;
-	padding-left: 40px;
+	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 30px;
 }
@@ -50,12 +90,16 @@ body{
 #section .pagination {
 	text-align: right;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 18px;
 	color: #96DBB1;
 }
 
 #section .pagination a {
 	color: #2CA089;
+}
+
+#section .pagination img {
+	width: 20px;
 }
 
 #section .note{
@@ -96,18 +140,18 @@ body{
 }
  
 code {
-  font-family:'Droid Sans Mono', monospace;
+  font-family:'PT Sans Mono', monospace;
   line-height: 16px;
 }
 
 
 #frontmenu{
-	margin-left: -40px;
+	margin-left: 0px;
 	margin-bottom: 10px;
 	background: #E7EEF3;
 	padding: 5px;
 	padding-left: 10px;
-	padding-right: 80px;
+	padding-right: 10px;
 }
 
 #frontmenu img{
@@ -120,7 +164,7 @@ code {
 }
 
 greet{
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	color: #FFFFFF;
 	font-size: 30px;
 	/*text-shadow: 4px 4px #22343C;*/
@@ -140,4 +184,10 @@ img{
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+#mini img {
+	width: 45%;
+	height: auto;
+	padding: 2px;
 }
