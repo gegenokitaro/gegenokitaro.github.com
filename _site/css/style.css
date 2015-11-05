@@ -11,6 +11,7 @@ body{
 	background-image: url("/img/sidebar_1.jpg");
 	/*background-color: #7A9497;*/
 	width: 15%;
+	max-width: 271px;
 	height: 450px;
 	border: 1px solid #cfcfcf;
 	border-radius: 10px;
