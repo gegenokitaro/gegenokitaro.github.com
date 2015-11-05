@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Testing Audio Player"
-description: ""
+description: "Contains awesome songs."
 category: 
 tags: []
 ---
