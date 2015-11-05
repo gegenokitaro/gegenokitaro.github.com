@@ -44,7 +44,7 @@ a.fill-div {
 }
 
 #sidebar span {
-	background-color: #5A9B79;
+	background-color: rgba(90,155,121,0.9);
 	width: 100%;
 	display: block;
 	margin-top: 10px;
