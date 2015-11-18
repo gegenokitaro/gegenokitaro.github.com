@@ -37,6 +37,13 @@ Here's the final screenshot.
 
 <br>
 <br>
+
+#### Update 2015 Nov 18
+
+Somehow, my xmonad changed to pink themed. Pink is manly. Majin Buu is pink. Boros is said to be pink. Patrick is pink. In the old time, pink (or red) represent manliness, came from the color of blood, and in the other hand, blue represent calmness, which is for female. But nowadays, everythings are reversed. 
+
+![xmonad-pink](/img/xmonad-pink.png)
+
 #### In The Future
 
 Won't post xmonad's step by step configuration, I've already done that multiple times, and there're too many xmonad tutorial over the internet, so I won't trouble myself with one. Any other than xmonad, I'll post it, depends on my level of laziness.
