@@ -49,37 +49,36 @@
 	    <h2>Monster!! (WIP)</h2>
 	</div>
 	<div id="section">
-            <p>This time, is the time for monsterwm. Lately I use this minimalist wm, yes it's a tiling wm, and figure something out. Monsterwm is awesome. It comes with pre-config. Much like dwm, you must config the wm before compile it so you can use it. I don't really like the concept of pre-config wm at first. I think, such a pain in the ass. We must make, make install, then log out from X and relogin. But after using it for a while, I found this wm is pretty customizable.</p>
+            
+<p>This time, is the time for monsterwm. Lately I use this minimalist wm, yes it’s a tiling wm, and figure something out. Monsterwm is awesome. It comes with pre-config. Much like dwm, you must config the wm before compile it so you can use it. I don’t really like the concept of pre-config wm at first. I think, such a pain in the ass. We must make, make install, then log out from X and relogin. But after using it for a while, I found this wm is pretty customizable.</p>
 
-<p><br>
+<p><br />
 What I want, is to make this clone of xmonad desktop using some other wm. For that, I will use monsterwm with some of its pre-configuration and make another desktop that resembles it.</p>
 
 <p><img src="/img/dsktp-bocknife.png" alt="xmonad with the song of bump of chicken - knife" /></p>
 
-<p><br>
-Okay, let's move to the documentation
-<br></p>
+<p><br />
+Okay, let’s move to the documentation
+<br /></p>
 
-<p>First, you clone it using git. In this case, I'm using its branch 'uselessgap' so I can add a Gap between each window that stacked.</p>
+<p>First, you clone it using git. In this case, I’m using its branch ‘uselessgap’ so I can add a Gap between each window that stacked.</p>
 
 <p>credit to c00kiemon5ter for making this awesome wm.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/c00kiemon5ter/monsterwm.git
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/c00kiemon5ter/monsterwm.git
 <span class="nv">$ </span><span class="nb">cd </span>monsterwm
 <span class="nv">$ </span>git checkout uselessgap
-<span class="nv">$ </span><span class="nb">cd </span>monsterwm</code></pre></div>
+<span class="nv">$ </span><span class="nb">cd </span>monsterwm</code></pre></figure>
 
+<p>If you <code>ls</code> inside its directory, you can see there is <code>config.def.h</code>. Or usually just <code>config.h</code>. It’s okay. We will just proceed to the next step. Configuring monsterwm’s pre-config.</p>
 
-<p>If you <code>ls</code> inside its directory, you can see there is <code>config.def.h</code>. Or usually just <code>config.h</code>. It's okay. We will just proceed to the next step. Configuring monsterwm's pre-config.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>~/g/monsterwm<span class="o">)</span> <span class="o">(</span>master<span class="o">)</span> ls
+config.def.h  config.h  LICENSE  Makefile  monsterwm.1  monsterwm.c  README.md</code></pre></figure>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span>~/g/monsterwm<span class="o">)</span> <span class="o">(</span>master<span class="o">)</span> ls
-config.def.h  config.h  LICENSE  Makefile  monsterwm.1  monsterwm.c  README.md</code></pre></div>
+<p><br />
+Edit <code>config.h</code> or <code>config.def.h</code> using your favorite editor. I’m using vim, just so you know. Inside, we will stumble upon many line of code, so I will skip some code, and just edit the ones that i need.</p>
 
-
-<p><br>
-Edit <code>config.h</code> or <code>config.def.h</code> using your favorite editor. I'm using vim, just so you know. Inside, we will stumble upon many line of code, so I will skip some code, and just edit the ones that i need.</p>
-
-<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cm">/** modifiers **/</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cm">/** modifiers **/</span>
 <span class="lineno"> 2</span> <span class="cp">#define MOD1            Mod1Mask</span>
 <span class="lineno"> 3</span> <span class="cp">#define MOD4            Mod4Mask</span>
 <span class="lineno"> 4</span> <span class="cp">#define MOD5            Mod5Mask</span>
@@ -102,15 +101,14 @@ Edit <code>config.h</code> or <code>config.def.h</code> using your favorite edit
 <span class="lineno">21</span> <span class="cp">#define UNFOCUS         &quot;#141414&quot;</span>
 <span class="lineno">22</span> <span class="cp">#define MINWSZ          50</span>
 <span class="lineno">23</span> <span class="cp">#define DEFAULT_DESKTOP 0</span>
-<span class="lineno">24</span> <span class="cp">#define DESKTOPS        3</span></code></pre></div>
-
+<span class="lineno">24</span> <span class="cp">#define DESKTOPS        3</span></code></pre></figure>
 
 <p>I define <code>MOD1</code>, <code>MOD4</code>, and <code>MOD5</code> for <code>altkey</code>, <code>superkey</code>, and I already forgot what <code>MOD5</code> means respectively. As you can see we can define anything in that header file. Underneath that code, we can find many <code>keybindings</code> configuration. So, I will leave that area in your preferences. I only change small parts for <code>keybindings</code>.</p>
 
-<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">menucmd</span><span class="p">[]</span>      <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;dmenu_run&quot;</span><span class="p">,</span> <span class="s">&quot;-fn&quot;</span><span class="p">,</span> <span class="s">&quot;terminus 9&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">};</span>
-<span class="lineno"> 2</span> <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">filecmd</span><span class="p">[]</span>     <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;pcmanfm&quot;</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
-<span class="lineno"> 3</span> <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">termcmd</span><span class="p">[]</span>     <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;termite&quot;</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
-<span class="lineno"> 4</span> <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">webcmd</span><span class="p">[]</span>      <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;dwb&quot;</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">menucmd</span><span class="p">[]</span>	   <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;dmenu_run&quot;</span><span class="p">,</span> <span class="s">&quot;-fn&quot;</span><span class="p">,</span> <span class="s">&quot;terminus 9&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">};</span>
+<span class="lineno"> 2</span> <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">filecmd</span><span class="p">[]</span>	   <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;pcmanfm&quot;</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
+<span class="lineno"> 3</span> <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">termcmd</span><span class="p">[]</span>	   <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;termite&quot;</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
+<span class="lineno"> 4</span> <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">webcmd</span><span class="p">[]</span>	   <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;dwb&quot;</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 <span class="lineno"> 5</span> 
 <span class="lineno"> 6</span> <span class="o">---</span> <span class="n">and</span> <span class="n">so</span> <span class="n">on</span>
 <span class="lineno"> 7</span> 
@@ -118,28 +116,27 @@ Edit <code>config.h</code> or <code>config.def.h</code> using your favorite edit
 <span class="lineno"> 9</span> <span class="cm"> * keyboard shortcuts</span>
 <span class="lineno">10</span> <span class="cm"> */</span>
 <span class="lineno">11</span> <span class="k">static</span> <span class="n">Key</span> <span class="n">keys</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-<span class="lineno">12</span>     <span class="cm">/* modifier     key            function           argument */</span>
+<span class="lineno">12</span>     <span class="cm">/* modifier		key            function           argument */</span>
 <span class="lineno">13</span>     <span class="p">{</span>  <span class="n">MOD1</span><span class="p">,</span>            <span class="n">XK_p</span><span class="p">,</span>          <span class="n">spawn</span><span class="p">,</span>             <span class="p">{.</span><span class="n">com</span> <span class="o">=</span> <span class="n">menucmd</span><span class="p">}},</span>
 <span class="lineno">14</span>     <span class="p">{</span>  <span class="n">MOD1</span><span class="p">,</span>            <span class="n">XK_w</span><span class="p">,</span>          <span class="n">spawn</span><span class="p">,</span>             <span class="p">{.</span><span class="n">com</span> <span class="o">=</span> <span class="n">webcmd</span><span class="p">}},</span>
 <span class="lineno">15</span>     <span class="p">{</span>  <span class="n">MOD1</span><span class="p">,</span>            <span class="n">XK_t</span><span class="p">,</span>          <span class="n">spawn</span><span class="p">,</span>             <span class="p">{.</span><span class="n">com</span> <span class="o">=</span> <span class="n">filecmd</span><span class="p">}},</span>
 <span class="lineno">16</span>     <span class="p">{</span>  <span class="n">MOD1</span><span class="o">|</span><span class="n">SHIFT</span><span class="p">,</span>      <span class="n">XK_Return</span><span class="p">,</span>     <span class="n">spawn</span><span class="p">,</span>             <span class="p">{.</span><span class="n">com</span> <span class="o">=</span> <span class="n">termcmd</span><span class="p">}},</span>
 <span class="lineno">17</span> 
-<span class="lineno">18</span> <span class="o">---</span> <span class="n">and</span> <span class="n">so</span> <span class="n">on</span></code></pre></div>
+<span class="lineno">18</span> <span class="o">---</span> <span class="n">and</span> <span class="n">so</span> <span class="n">on</span></code></pre></figure>
 
+<p><br />
+Aaaaand, we’re done. Just type <code>make</code> and then <code>sudo make install</code> in your terminal to make our ‘configed’ monsterwm on the run.</p>
 
-<p><br>
-Aaaaand, we're done. Just type <code>make</code> and then <code>sudo make install</code> in your terminal to make our 'configed' monsterwm on the run.</p>
+<p>What now? If we try our monsterwm, it’s just a blank screen with some control of window. There will be no bar, no wallpaper, and no, I don’t like emptiness. So, the next step is to costumize the bar, the wallpaper, and the other complimentaries to make this wm okay to use.</p>
 
-<p>What now? If we try our monsterwm, it's just a blank screen with some control of window. There will be no bar, no wallpaper, and no, I don't like emptiness. So, the next step is to costumize the bar, the wallpaper, and the other complimentaries to make this wm okay to use.</p>
+<p>For the top panel, I will use LemonBoy’s <code>bar</code>. It’s like dzen2, but with its own plus minus. You can use whatever panel you want. The configuration is pretty easy I think. There is no xft support on the LemonBoy’s <code>bar</code>, so if you want something that has xft support, you can use dzen2 or raedwulf’s version of <code>bar</code> with full xft support. Your choice.</p>
 
-<p>For the top panel, I will use LemonBoy's <code>bar</code>. It's like dzen2, but with its own plus minus. You can use whatever panel you want. The configuration is pretty easy I think. There is no xft support on the LemonBoy's <code>bar</code>, so if you want something that has xft support, you can use dzen2 or raedwulf's version of <code>bar</code> with full xft support. Your choice.</p>
-
-<p><br>
+<p><br />
 Okay, we will begin.</p>
 
-<p>First, monsterwm is not xmonad. So we must config it before start it. Means, we have to parse some of its output and change it. Confusing? I can't tell you what actually I mean, so let's just make some code. May the Code bless us with its understanding. I will make <code>startup</code> file to launch monsterwm and it's complimentaries.</p>
+<p>First, monsterwm is not xmonad. So we must config it before start it. Means, we have to parse some of its output and change it. Confusing? I can’t tell you what actually I mean, so let’s just make some code. May the Code bless us with its understanding. I will make <code>startup</code> file to launch monsterwm and it’s complimentaries.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="nv">ff</span><span class="o">=</span><span class="s2">&quot;/tmp/monsterwm.fifo&quot;</span>             <span class="c"># this part is to parse the output of monsterwm</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="nv">ff</span><span class="o">=</span><span class="s2">&quot;/tmp/monsterwm.fifo&quot;</span>             <span class="c"># this part is to parse the output of monsterwm</span>
 <span class="lineno"> 2</span> <span class="o">[[</span> -p <span class="nv">$ff</span> <span class="o">]]</span> <span class="o">||</span> mkfifo -m <span class="m">600</span> <span class="s2">&quot;$ff&quot;</span>  <span class="c"># running on the wild</span>
 <span class="lineno"> 3</span> 
 <span class="lineno"> 4</span> xset +fp ~/.fonts/custom/ <span class="p">&amp;</span>          
@@ -151,13 +148,12 @@ Okay, we will begin.</p>
 <span class="lineno">10</span> devmon <span class="p">&amp;</span>
 <span class="lineno">11</span> wmname LG3D <span class="p">&amp;</span>
 <span class="lineno">12</span> 
-<span class="lineno">13</span> <span class="c"># and above is just what i usually run side to side with most of my wm</span></code></pre></div>
+<span class="lineno">13</span> <span class="c"># and above is just what i usually run side to side with most of my wm</span></code></pre></figure>
 
+<p><br />
+And the rest is to put the output of our parsing into <code>bar</code>. For now, I’m too lazy to explaining what in the name of hell is the meaning of this code. Maybe later when I’m not busy.</p>
 
-<p><br>
-And the rest is to put the output of our parsing into <code>bar</code>. For now, I'm too lazy to explaining what in the name of hell is the meaning of this code. Maybe later when I'm not busy.</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="k">while</span> <span class="nb">read</span> -r<span class="p">;</span> <span class="k">do</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="k">while</span> <span class="nb">read</span> -r<span class="p">;</span> <span class="k">do</span>
 <span class="lineno"> 2</span>     <span class="c"># filter output to only what we want to match and parse</span>
 <span class="lineno"> 3</span>     <span class="o">[[</span> <span class="nv">$REPLY</span> <span class="o">=</span>~ ^<span class="o">(([[</span>:digit:<span class="o">]]</span>+:<span class="o">)</span>+<span class="o">[[</span>:digit:<span class="o">]]</span>+ ?<span class="o">)</span>+<span class="nv">$ </span><span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span> -ra desktops <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;$REPLY&quot;</span> <span class="o">||</span> <span class="k">continue</span>
 <span class="lineno"> 4</span>     
@@ -175,11 +171,11 @@ And the rest is to put the output of our parsing into <code>bar</code>. For now,
 <span class="lineno">16</span>             0<span class="o">)</span> <span class="nv">d</span><span class="o">=</span><span class="s2">&quot; term&quot;</span> <span class="nv">s</span><span class="o">=</span><span class="s2">&quot; &quot;</span>   <span class="p">;;</span>
 <span class="lineno">17</span>             1<span class="o">)</span> <span class="nv">d</span><span class="o">=</span><span class="s2">&quot; web&quot;</span> <span class="nv">s</span><span class="o">=</span><span class="s2">&quot; &quot;</span> <span class="p">;;</span>
 <span class="lineno">18</span>             2<span class="o">)</span> <span class="nv">d</span><span class="o">=</span><span class="s2">&quot; fun&quot;</span> <span class="nv">s</span><span class="o">=</span><span class="s2">&quot; &quot;</span> <span class="p">;;</span>
-<span class="lineno">19</span>      3<span class="o">)</span> <span class="nv">d</span><span class="o">=</span><span class="s2">&quot; work&quot;</span> <span class="nv">s</span><span class="o">=</span><span class="s2">&quot; &quot;</span> <span class="p">;;</span>
+<span class="lineno">19</span> 	    3<span class="o">)</span> <span class="nv">d</span><span class="o">=</span><span class="s2">&quot; work&quot;</span> <span class="nv">s</span><span class="o">=</span><span class="s2">&quot; &quot;</span> <span class="p">;;</span>
 <span class="lineno">20</span>         <span class="k">esac</span>
 <span class="lineno">21</span>  
 <span class="lineno">22</span>        <span class="c"># name each layout/mode with a symbol underline=FF364069</span>
-<span class="lineno">23</span>  <span class="o">((</span>c<span class="o">))</span> <span class="o">&amp;&amp;</span> <span class="nv">b</span><span class="o">=</span><span class="s2">&quot;#FF272727&quot;</span> <span class="nv">u</span><span class="o">=</span><span class="s2">&quot;#FFA93432&quot;</span> <span class="o">&amp;&amp;</span> <span class="k">case</span> <span class="nv">$m</span> in
+<span class="lineno">23</span> 	<span class="o">((</span>c<span class="o">))</span> <span class="o">&amp;&amp;</span> <span class="nv">b</span><span class="o">=</span><span class="s2">&quot;#FF272727&quot;</span> <span class="nv">u</span><span class="o">=</span><span class="s2">&quot;#FFA93432&quot;</span> <span class="o">&amp;&amp;</span> <span class="k">case</span> <span class="nv">$m</span> in
 <span class="lineno">24</span>             0<span class="o">)</span> <span class="nv">i</span><span class="o">=</span><span class="s2">&quot;  %{B#FF333333}  %{B}&quot;</span> <span class="p">;;</span>
 <span class="lineno">25</span>             1<span class="o">)</span> <span class="nv">i</span><span class="o">=</span><span class="s2">&quot;   ⮘ &quot;</span> <span class="p">;;</span>
 <span class="lineno">26</span>             2<span class="o">)</span> <span class="nv">i</span><span class="o">=</span><span class="s2">&quot;  [B]&quot;</span> <span class="p">;;</span>
@@ -198,10 +194,9 @@ And the rest is to put the output of our parsing into <code>bar</code>. For now,
 <span class="lineno">39</span> <span class="k">done</span> &lt; <span class="s2">&quot;$ff&quot;</span> <span class="p">|</span> bar -p -d -g 300x17+0+0 -f <span class="s1">&#39;-*-stlarch-*-*-*-*-10-*-*-*-*-*-*-*,-*-lemon-*-*-*-*-10-*-*-*-*-*-*-*&#39;</span> -u <span class="m">3</span> -B <span class="s1">&#39;#FF161616&#39;</span> -F <span class="s2">&quot;FF9A9A9A&quot;</span><span class="p">&amp;</span>
 <span class="lineno">40</span>  
 <span class="lineno">41</span> <span class="c"># pass output to fifo</span>
-<span class="lineno">42</span> monsterwm &gt; <span class="s2">&quot;$ff&quot;</span></code></pre></div>
+<span class="lineno">42</span> monsterwm &gt; <span class="s2">&quot;$ff&quot;</span></code></pre></figure>
 
-
-<p><br></p>
+<p><br /></p>
 
 <p>The code above will make the bar look like this.</p>
 
@@ -216,7 +211,6 @@ And the rest is to put the output of our parsing into <code>bar</code>. For now,
 <div class="note">
 You can get the codes above here <a href="https://github.com/gegenokitaro/dot/tree/master/desktop/Monster">Monster!!</a>
 </div>
-
 
 	</div>
         <div id="disqus_thread"></div>
