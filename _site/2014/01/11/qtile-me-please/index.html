@@ -54,16 +54,16 @@
 <p>i’m using qtile now, and planning on using it over my xmonad. maybe not, i still love xmonad. but qtile definitely good at layouting. i really fall in love with its TreeTab layout. so, why don’t you give it a try?</p>
 
 <p>here is few tricks to mod qtile.
-first, you have to know where is your qtile’s conf. it’s inside <code>.config/qtile/config.py</code></p>
+first, you have to know where is your qtile’s conf. it’s inside <code class="highlighter-rouge">.config/qtile/config.py</code></p>
 
 <p>The theme should reference these variables whenever needed.</p>
 
 <h3 id="workspaces-with-more-edible-names">Workspaces with more edible names</h3>
 
 <p>It’s a pain in the ass when you want to config qtile and know nothing about programming and shit, like myself. And i don’t know from right to left how to change workspaces names like i do on monad or subtle. <br />
-Open <code>config.py</code> and look for <code>group_names</code> section.</p>
+Open <code class="highlighter-rouge">config.py</code> and look for <code class="highlighter-rouge">group_names</code> section.</p>
 
-<pre><code>group_names = [
+<div class="highlighter-rouge"><pre class="highlight"><code>group_names = [
    ("fuck", {}),
    ("this", {}),
    ("shit", {}),
@@ -84,8 +84,9 @@ keys.append(
     Key([mod, "shift"], str(i), lazy.window.togroup(name))
 )
 </code></pre>
+</div>
 
-<p>And that’s it. We can use <code>enumerate</code> to read the group names and arrange some shortcut keys to give us proper feel.</p>
+<p>And that’s it. We can use <code class="highlighter-rouge">enumerate</code> to read the group names and arrange some shortcut keys to give us proper feel.</p>
 
 	</div>
         <div id="disqus_thread"></div>
