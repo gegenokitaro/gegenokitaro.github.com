@@ -92,3 +92,9 @@ Apanya yg jelek, ending nya luar biasa.
 Huuuf..
 
 Segini dulu, besok lanjut. Uda malem, dan besok masih masuk kerja.
+
+Pengen brainstorming, tapi ga ada ide..
+
+Dinosaurus uda.. mau ngelanjutin takut..
+
+Apa ya..
