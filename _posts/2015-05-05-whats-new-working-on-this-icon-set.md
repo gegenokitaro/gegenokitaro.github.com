@@ -26,7 +26,7 @@ By the way, Gnome 3.16 is already out in the open, and for the most part i love 
 
 <br>
 
-####If by any chance, you read this post on my blog (you came to the most boring blog in the world), please help me out by pointing which applications that should be in the icon themes. I have a problem collecting application name list since i don't usually use a lot of applications.
+#### If by any chance, you read this post on my blog (you came to the most boring blog in the world), please help me out by pointing which applications that should be in the icon themes. I have a problem collecting application name list since i don't usually use a lot of applications.
 
 <br>
 

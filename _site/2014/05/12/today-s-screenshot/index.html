@@ -80,8 +80,8 @@ function showSpoiler(obj)
 	}
 	</script>
 </head>
-<p>### Today’s Idea
-I was talking with my friends about altered dimension, devil, satan, and jinn (?spectral creatures, i guess?) and it’s a nice topic i think..</p>
+<h3 id="todays-idea">Today’s Idea</h3>
+<p>I was talking with my friends about altered dimension, devil, satan, and jinn (?spectral creatures, i guess?) and it’s a nice topic i think..</p>
 
 <p>My Teacher said, jinn, or devil, or any spectral creatures that appeared before any human eyes was a result of manifestation. Creatures like that, were actualy energies that pile up and became a ‘hard material’. In my language, it’s called “penampakan”. And that manifestation is from our thought. It explains why many sightings all over the world takes different form. So we move from that talk to any sightings-talking. We talked about how my friend meet his grandma that was passed away a long time ago. He said, it’s not his grandma, but a spectral creatures that look like his grandma. We came to a conclusion. There’re 2 type of sightings that can occur related to any deceased person. Wether it’s the person we knew or not. One, it’s from memories that left before they’re passed away. And the other is from that spectral creatures that made its manifestation from our thoughts. Ah.. my English isn’t good, so i can’t continue this babbling anymore.. well..
 <br />
@@ -113,59 +113,59 @@ And below is the code for my xmonad. Or you can download it <a href="/assets/ge.
 
 <span class="kr">import</span> <span class="nn">XMonad.Layout.Spacing</span>
 
-<span class="n">ic</span> <span class="o">=</span> <span class="s">"^i(/home/yotsuba/.xmonad/symbol/"</span>
-<span class="n">place</span> <span class="o">::</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span>
-<span class="n">place</span> <span class="o">=</span> <span class="n">clickable</span> <span class="o">$</span> <span class="p">[</span> <span class="n">ic</span><span class="o">++</span><span class="s">"mod-term.xbm)"</span>
-		    <span class="p">,</span> <span class="n">ic</span><span class="o">++</span><span class="s">"mod-book.xbm)"</span>
-		    <span class="p">,</span> <span class="n">ic</span><span class="o">++</span><span class="s">"mod-disk.xbm)"</span>
-		    <span class="p">,</span> <span class="n">ic</span><span class="o">++</span><span class="s">"mod-home.xbm)"</span>
-		    <span class="p">,</span> <span class="n">ic</span><span class="o">++</span><span class="s">"mod-ngap.xbm)"</span> <span class="p">]</span>
-	<span class="kr">where</span> <span class="n">clickable</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span> <span class="s">"^ca(1,xdotool key super+"</span> <span class="o">++</span> <span class="n">show</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">++</span> <span class="s">")"</span> <span class="o">++</span> <span class="n">ws</span> <span class="o">++</span> <span class="s">"^ca()"</span> <span class="o">|</span>
-				<span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">ws</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">zip</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="p">]</span> <span class="n">l</span><span class="p">,</span>
-				 <span class="kr">let</span> <span class="n">n</span> <span class="o">=</span> <span class="n">i</span> <span class="p">]</span>
+<span class="nf">ic</span> <span class="ow">=</span> <span class="s">&quot;^i(/home/yotsuba/.xmonad/symbol/&quot;</span>
+<span class="nf">place</span> <span class="ow">::</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span>
+<span class="nf">place</span> <span class="ow">=</span> <span class="n">clickable</span> <span class="o">$</span> <span class="p">[</span> <span class="n">ic</span><span class="o">++</span><span class="s">&quot;mod-term.xbm)&quot;</span>
+		    <span class="p">,</span> <span class="n">ic</span><span class="o">++</span><span class="s">&quot;mod-book.xbm)&quot;</span>
+		    <span class="p">,</span> <span class="n">ic</span><span class="o">++</span><span class="s">&quot;mod-disk.xbm)&quot;</span>
+		    <span class="p">,</span> <span class="n">ic</span><span class="o">++</span><span class="s">&quot;mod-home.xbm)&quot;</span>
+		    <span class="p">,</span> <span class="n">ic</span><span class="o">++</span><span class="s">&quot;mod-ngap.xbm)&quot;</span> <span class="p">]</span>
+	<span class="kr">where</span> <span class="n">clickable</span> <span class="n">l</span> <span class="ow">=</span> <span class="p">[</span> <span class="s">&quot;^ca(1,xdotool key super+&quot;</span> <span class="o">++</span> <span class="n">show</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">++</span> <span class="s">&quot;)&quot;</span> <span class="o">++</span> <span class="n">ws</span> <span class="o">++</span> <span class="s">&quot;^ca()&quot;</span> <span class="o">|</span>
+				<span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">ws</span><span class="p">)</span> <span class="ow">&lt;-</span> <span class="n">zip</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="p">]</span> <span class="n">l</span><span class="p">,</span>
+				 <span class="kr">let</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">i</span> <span class="p">]</span>
 
-<span class="n">muatulang</span> <span class="o">=</span> <span class="s">"xmonad --recompile &amp;&amp; killall dzen2 &amp;&amp; xmonad --restart"</span>
+<span class="nf">muatulang</span> <span class="ow">=</span> <span class="s">&quot;xmonad --recompile &amp;&amp; killall dzen2 &amp;&amp; xmonad --restart&quot;</span>
 
-<span class="n">skeys</span> <span class="o">=</span> <span class="p">[</span> <span class="p">((</span><span class="n">mod4Mask</span> <span class="o">.|.</span> <span class="n">shiftMask</span><span class="p">,</span> 	<span class="n">xK_r</span><span class="p">),</span> 		<span class="n">spawn</span> <span class="n">muatulang</span><span class="p">)</span>
-	<span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> 			<span class="n">xK_r</span><span class="p">),</span>		<span class="n">spawn</span> <span class="s">"dmenu_run -b"</span><span class="p">)</span>
+<span class="nf">skeys</span> <span class="ow">=</span> <span class="p">[</span> <span class="p">((</span><span class="n">mod4Mask</span> <span class="o">.|.</span> <span class="n">shiftMask</span><span class="p">,</span> 	<span class="n">xK_r</span><span class="p">),</span> 		<span class="n">spawn</span> <span class="n">muatulang</span><span class="p">)</span>
+	<span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> 			<span class="n">xK_r</span><span class="p">),</span>		<span class="n">spawn</span> <span class="s">&quot;dmenu_run -b&quot;</span><span class="p">)</span>
 	<span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> 			<span class="n">xK_Left</span><span class="p">),</span> 	<span class="n">prevWS</span><span class="p">)</span>
 	<span class="p">,</span> <span class="p">((</span><span class="n">mod4Mask</span><span class="p">,</span> 			<span class="n">xK_Right</span><span class="p">),</span>	<span class="n">nextWS</span><span class="p">)</span>
 	<span class="p">]</span>
-	<span class="n">black</span> <span class="o">=</span> <span class="s">"#111111"</span>
-<span class="n">white</span> <span class="o">=</span> <span class="s">"#ffffff"</span>
-<span class="n">blues</span> <span class="o">=</span> <span class="s">"#7DC8C6"</span>
-<span class="n">greys</span> <span class="o">=</span> <span class="s">"#696969"</span>
+	<span class="n">black</span> <span class="ow">=</span> <span class="s">&quot;#111111&quot;</span>
+<span class="nf">white</span> <span class="ow">=</span> <span class="s">&quot;#ffffff&quot;</span>
+<span class="nf">blues</span> <span class="ow">=</span> <span class="s">&quot;#7DC8C6&quot;</span>
+<span class="nf">greys</span> <span class="ow">=</span> <span class="s">&quot;#696969&quot;</span>
 
-<span class="n">test</span> <span class="n">h</span> <span class="o">=</span> <span class="kr">do</span>
+<span class="nf">test</span> <span class="n">h</span> <span class="ow">=</span> <span class="kr">do</span>
 	<span class="n">dynamicLogWithPP</span> <span class="o">$</span> <span class="n">fuck</span> <span class="n">h</span>
-<span class="n">fuck</span> <span class="o">::</span> <span class="kt">Handle</span> <span class="o">-&gt;</span> <span class="kt">PP</span>
-<span class="n">fuck</span> <span class="n">h</span> <span class="o">=</span> <span class="n">defaultPP</span>
-	<span class="p">{</span> <span class="n">ppOutput</span>		<span class="o">=</span> <span class="n">hPutStrLn</span> <span class="n">h</span>
-	<span class="p">,</span> <span class="n">ppCurrent</span>		<span class="o">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">blues</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
-	<span class="p">,</span> <span class="n">ppVisible</span>		<span class="o">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
-	<span class="p">,</span> <span class="n">ppHidden</span>		<span class="o">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
-	<span class="p">,</span> <span class="n">ppHiddenNoWindows</span>	<span class="o">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">greys</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
-	<span class="p">,</span> <span class="n">ppSep</span> 		<span class="o">=</span> <span class="s">" ^r(2x2) "</span>
-	<span class="p">,</span> <span class="n">ppWsSep</span>		<span class="o">=</span> <span class="s">""</span>
-	<span class="p">,</span> <span class="n">ppLayout</span>		<span class="o">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
-	<span class="p">,</span> <span class="n">ppTitle</span>		<span class="o">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+<span class="nf">fuck</span> <span class="ow">::</span> <span class="kt">Handle</span> <span class="ow">-&gt;</span> <span class="kt">PP</span>
+<span class="nf">fuck</span> <span class="n">h</span> <span class="ow">=</span> <span class="n">defaultPP</span>
+	<span class="p">{</span> <span class="n">ppOutput</span>		<span class="ow">=</span> <span class="n">hPutStrLn</span> <span class="n">h</span>
+	<span class="p">,</span> <span class="n">ppCurrent</span>		<span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">blues</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+	<span class="p">,</span> <span class="n">ppVisible</span>		<span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+	<span class="p">,</span> <span class="n">ppHidden</span>		<span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+	<span class="p">,</span> <span class="n">ppHiddenNoWindows</span>	<span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">greys</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+	<span class="p">,</span> <span class="n">ppSep</span> 		<span class="ow">=</span> <span class="s">&quot; ^r(2x2) &quot;</span>
+	<span class="p">,</span> <span class="n">ppWsSep</span>		<span class="ow">=</span> <span class="s">&quot;&quot;</span>
+	<span class="p">,</span> <span class="n">ppLayout</span>		<span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
+	<span class="p">,</span> <span class="n">ppTitle</span>		<span class="ow">=</span> <span class="n">dzenColor</span> <span class="p">(</span><span class="n">white</span><span class="p">)</span> <span class="p">(</span><span class="n">black</span><span class="p">)</span> <span class="o">.</span> <span class="n">pad</span>
 	<span class="p">}</span>
 
-<span class="n">main</span> <span class="o">=</span> <span class="kr">do</span>
-	<span class="n">pan</span> <span class="o">&lt;-</span> <span class="n">spawnPipe</span> <span class="n">dzen2bar</span>
-	<span class="n">nap</span> <span class="o">&lt;-</span> <span class="n">spawnPipe</span> <span class="n">other</span>
-<span class="n">xmonad</span> <span class="o">$</span> <span class="n">defaultConfig</span>
-	<span class="p">{</span> <span class="n">manageHook</span> <span class="o">=</span> <span class="n">manageDocks</span> <span class="o">&lt;+&gt;</span> <span class="n">manageHook</span> <span class="n">defaultConfig</span>
-	<span class="p">,</span> <span class="n">layoutHook</span> <span class="o">=</span> <span class="n">avoidStruts</span> <span class="o">$</span> <span class="n">spacing</span> <span class="mi">4</span> <span class="o">$</span> <span class="kt">Tall</span> <span class="mi">1</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> 
-	<span class="p">,</span> <span class="n">modMask</span> <span class="o">=</span> <span class="n">mod4Mask</span>
-	<span class="p">,</span> <span class="n">workspaces</span> <span class="o">=</span> <span class="n">place</span>
-	<span class="p">,</span> <span class="n">terminal</span> <span class="o">=</span> <span class="s">"urxvt"</span>
-	<span class="p">,</span> <span class="n">startupHook</span> <span class="o">=</span> <span class="n">setWMName</span> <span class="s">"LG3D"</span>
-	<span class="p">,</span> <span class="n">logHook</span> <span class="o">=</span> <span class="n">test</span> <span class="n">pan</span>
-	<span class="p">,</span> <span class="n">borderWidth</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+	<span class="n">pan</span> <span class="ow">&lt;-</span> <span class="n">spawnPipe</span> <span class="n">dzen2bar</span>
+	<span class="n">nap</span> <span class="ow">&lt;-</span> <span class="n">spawnPipe</span> <span class="n">other</span>
+<span class="nf">xmonad</span> <span class="o">$</span> <span class="n">defaultConfig</span>
+	<span class="p">{</span> <span class="n">manageHook</span> <span class="ow">=</span> <span class="n">manageDocks</span> <span class="o">&lt;+&gt;</span> <span class="n">manageHook</span> <span class="n">defaultConfig</span>
+	<span class="p">,</span> <span class="n">layoutHook</span> <span class="ow">=</span> <span class="n">avoidStruts</span> <span class="o">$</span> <span class="n">spacing</span> <span class="mi">4</span> <span class="o">$</span> <span class="kt">Tall</span> <span class="mi">1</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> 
+	<span class="p">,</span> <span class="n">modMask</span> <span class="ow">=</span> <span class="n">mod4Mask</span>
+	<span class="p">,</span> <span class="n">workspaces</span> <span class="ow">=</span> <span class="n">place</span>
+	<span class="p">,</span> <span class="n">terminal</span> <span class="ow">=</span> <span class="s">&quot;urxvt&quot;</span>
+	<span class="p">,</span> <span class="n">startupHook</span> <span class="ow">=</span> <span class="n">setWMName</span> <span class="s">&quot;LG3D&quot;</span>
+	<span class="p">,</span> <span class="n">logHook</span> <span class="ow">=</span> <span class="n">test</span> <span class="n">pan</span>
+	<span class="p">,</span> <span class="n">borderWidth</span> <span class="ow">=</span> <span class="mi">0</span>
 	<span class="p">}</span> <span class="p">`</span><span class="n">additionalKeys</span><span class="p">`</span> <span class="n">skeys</span>
-	<span class="kr">where</span> <span class="n">dzen2bar</span> 	<span class="o">=</span> <span class="s">"dzen2 -p -ta l -e 'button3=' -fn 'cure-9' -w 640 -h 18 -y 768"</span>
-      		<span class="n">other</span>	<span class="o">=</span> <span class="s">"sh /home/yotsuba/.xmonad/script/scientist.sh"</span></code></pre></figure>
+	<span class="kr">where</span> <span class="n">dzen2bar</span> 	<span class="ow">=</span> <span class="s">&quot;dzen2 -p -ta l -e &#39;button3=&#39; -fn &#39;cure-9&#39; -w 640 -h 18 -y 768&quot;</span>
+      		<span class="n">other</span>	<span class="ow">=</span> <span class="s">&quot;sh /home/yotsuba/.xmonad/script/scientist.sh&quot;</span></code></pre></figure>
 
 
 	</div>

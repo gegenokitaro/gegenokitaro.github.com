@@ -10,9 +10,9 @@ My HDD drive is dying. Bad sectors everywhere. My Arch is doomed. It's been 5 ye
 <br>
 <br>
 <br>
-###AND MY ANSWER IS FUCK THE SEA
-###FUCK THE OCEAN
-###COME AT ME KRAKEN
+### AND MY ANSWER IS FUCK THE SEA
+### FUCK THE OCEAN
+### COME AT ME KRAKEN
 <br>
 <br>
 <br>
@@ -29,7 +29,7 @@ An empty machine box, with the power of 6GB of RAM, Intel i3 procie, old MSI mot
 <br>
 <br>
 <br>
-###Why Archlinux?
+### Why Archlinux?
 
 Contrary to popular belief, I think Archlinux isn't for so advanced linux user, actually it's a bit more for normal users who know to install it. There're some myths that I think it's just myths. Here comes, Archlinux Mythbuster.
 
@@ -64,7 +64,7 @@ A little trip to my freshly installed Gnome-powered Archlinux. I use Google Chro
 I rarely play any games, so the only game I own is Stepmania. I love rhythm game and I love how many stepmania communities can provide my favorite song. So, it's my only game installed on this machine box. I didn't even install Steam like I usually do.
 <br>
 <br>
-###What's going on?
+### What's going on?
 
 This weekend have to be a productive weekend. I have some free time so I plan to continue my delayed icon set, which is near abandoned. By the way, yesterday I accepted the "1 Day 1 (Useless) App Challenge" from my friend, so I ended up making this (useless) app. It's a simple Openbox theme generator, which is built for lazy people. One of my favorite WM is openbox, and I find it almost a pain in the ass to write a theme. Have to write window.title.blabla for most time. So I decided to write an app that can automatically generate openbox theme code. So I can just input the color code or the window type without actually write the theme code.
 

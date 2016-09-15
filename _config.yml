@@ -13,6 +13,6 @@ paginate: 10
 
 markdown: kramdown
 permalink: pretty
-highlighter: rouge
+highlighter: pygments
 
 gems: [jekyll-paginate]

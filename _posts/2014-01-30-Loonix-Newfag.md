@@ -3,7 +3,7 @@ title: Loonix Newfag Here!! And fuck you all (Bahasa)
 layout: post
 ---
 
-###Baru di dunia Loonix? Baca!! 
+### Baru di dunia Loonix? Baca!! 
 Buat para pendatang baru di dunia open source, khususnya pada bidang per-kernel-an linux, baca ya. Biar ga tersesat di tengah kerasnya jalan yang penuh konak dan duri, berlumpur dan berpasir. Jangan sok dulu ya, tulisan berikut ini bukan sok menggurui, tapi cuman uneg-uneg pemisuh (baca: penulis) buat bocah-bocah kemaren sore yang belom ngerti susahnya maintenance mesin mu sendiri.
 
 Kenapa penuh dengan nada kebencian? Well, kalo dianggap ini menggunakan nada kebencian, ya, saya ga munafik. Saya benci kalian. Saya benci manusia. Karena itu, didasari oleh rasa kebencian yang teramat sangat ini, saya mau menyampaikan sesuatu supaya kalian bisa paling enggak meminimalisir sinyal kebencian yang terpancar dari tubuhmu. Biar saya ga benci-benci amat sama kalian.
@@ -22,9 +22,9 @@ Oh, gueh udah berhasil install Archlinux, Gentoo, gueh udah mastah. Mastah ndasm
 Banyak ya uneg-uneg nya? iya banyak, biar kelian ga usah ngalamin hal-hal diatas. Sebelum ngalamin saya <i>ilok-ilok</i> dulu, saya ejek dulu. Biar ga kebacut, terlanjur basah, ntar sakit hati, jadi BSH Loonix. Ini juga salah satu usaha saya untuk membuat dunia opensource Indonesia jadi lebih nyaman ditinggali, baik oleh para sepuh maupun para newbie kek saya enih. Biar ga banyak flamming karena tersulut kebencian. Meski ga bisa dibenarkan jalan kekerasan enih.
 
 <br>
-##BAB 2
+## BAB 2
 <br>
-####Biar ga jadi newborn asshole
+#### Biar ga jadi newborn asshole
 1. Kudu tahu etika berforum. Jangan asal nyeplos. Forum dihuni manusia bukan mesin.<br>
 Udah tanya, maksa, ngejek, flamming. kebacut le.. Sepuh-sepuh itu manusia, kesian kalian gitukan. Emang bayar ke mereka kalo kalian nanya? enggak kan? Gratis kan? minimal terima kasih. Sertakan pula kalo bisa, data yang lengkap. misal kalo ada error, log nya di include.<br><br>
 2. Ga usah banding-bandingin sistem operasi <br>
@@ -36,8 +36,8 @@ Di dunia ini yang instan cuman indomie. Sarimi juga. Oh iya pop mie. Has.. pokok
 5. Google first <br>
 Satu-satunya entitas di muka bumi yang ga marah, mangkel, bosen, jengkel, gelo kalo ditanyain terus. Belajar pake google. <br><br>
 
-####Yang ini bahasa halus dan ga kasar
-######Ada ga sih kiat-kiat biar ga terlalu struggling kalo mau pindah ke mesin linux? Ada.
+#### Yang ini bahasa halus dan ga kasar
+###### Ada ga sih kiat-kiat biar ga terlalu struggling kalo mau pindah ke mesin linux? Ada.
 1. Masih baru megang linux? cari di distrowatch.com peringkat teratas. Biasanya, distro diperingkat atas itu umum dan banyak dipakai oleh user-user di seluruh dunia, diikuti oleh wiki yang membangun. Jadi, itu bisa dijadikan starting point untuk memulai mencoba distro linux.
 2. Cari temen yang pakai linux di mesinnya. Kalo bisa temen deket ato temen yang rumahnya deket. Kenapa? biar bisa sharing. Kalo bisa sekalian pakai distro yang sama. Ples nya, kalo misal ada error ato bug, bisa nyoba troubleshooting bareng-bareng. kalo layar nge-blank, minimal ada temen buat berbagi kesedihan. Dukungan moral orang terdekat bisa jadi kekuatan tersendiri.
 3. Masih bingung dengan cara kerja sistem operasi basis linux? Dicoba dulu aja pake virtualisasi. Bisa menggunakan VirtualBox ato VMWare atau apapun yang bisa dipake virtualisasi. Untung-untung ada mesin nganggur buat percobaan. Disitu bebas dikonfig, dikustomisasi, nanti kalo udah lumayan paham, baru install di mesin utama. Untuk meminimalisir resiko.
@@ -45,7 +45,7 @@ Satu-satunya entitas di muka bumi yang ga marah, mangkel, bosen, jengkel, gelo k
 5. Belajar bahasa Inggris. Ga semua wiki dari distro bersangkutan menyediakan terjemahan bahasa Indonesia. google translate pun kadang ngaco. Jadi selamat belajar bahasa Inggris.
 6. Perbanyak ibadah. niscaya dosa mu diampuni.<br><br>
 
-####Udah. Capek.
+#### Udah. Capek.
 Segini dulu. Asu kabeh
 <br>
 <br>

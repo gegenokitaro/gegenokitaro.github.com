@@ -146,7 +146,7 @@ Actually, I use Gnome3 on daily basis. But since I got my memory broken and left
 <span class="c"># Copyright (c) 2013 Tao Sauvage</span>
 <span class="c">#</span>
 <span class="c"># Permission is hereby granted, free of charge, to any person obtaining a copy</span>
-<span class="c"># of this software and associated documentation files (the "Software"), to deal</span>
+<span class="c"># of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
 <span class="c"># in the Software without restriction, including without limitation the rights</span>
 <span class="c"># to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
 <span class="c"># copies of the Software, and to permit persons to whom the Software is</span>
@@ -155,7 +155,7 @@ Actually, I use Gnome3 on daily basis. But since I got my memory broken and left
 <span class="c"># The above copyright notice and this permission notice shall be included in</span>
 <span class="c"># all copies or substantial portions of the Software.</span>
 <span class="c">#</span>
-<span class="c"># THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="c"># THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
 <span class="c"># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
 <span class="c"># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
 <span class="c"># AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
@@ -168,48 +168,48 @@ Actually, I use Gnome3 on daily basis. But since I got my memory broken and left
 <span class="kn">from</span> <span class="nn">libqtile</span> <span class="kn">import</span> <span class="n">layout</span><span class="p">,</span> <span class="n">bar</span><span class="p">,</span> <span class="n">widget</span>
 <span class="kn">from</span> <span class="nn">libqtile.dgroups</span> <span class="kn">import</span> <span class="n">simple_key_binder</span>
 
-<span class="n">mod</span> <span class="o">=</span> <span class="s">"mod4"</span>
+<span class="n">mod</span> <span class="o">=</span> <span class="s">&quot;mod4&quot;</span>
 
 <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span>
     <span class="c"># Switch between windows in current stack pane</span>
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">"k"</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;k&quot;</span><span class="p">,</span>
         <span class="n">lazy</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
     <span class="p">),</span>
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">"j"</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;j&quot;</span><span class="p">,</span>
         <span class="n">lazy</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
     <span class="p">),</span>
 
     <span class="c"># Move windows up or down in current stack</span>
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">,</span> <span class="s">"control"</span><span class="p">],</span> <span class="s">"k"</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">,</span> <span class="s">&quot;control&quot;</span><span class="p">],</span> <span class="s">&quot;k&quot;</span><span class="p">,</span>
         <span class="n">lazy</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">shuffle_down</span><span class="p">()</span>
     <span class="p">),</span>
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">,</span> <span class="s">"control"</span><span class="p">],</span> <span class="s">"j"</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">,</span> <span class="s">&quot;control&quot;</span><span class="p">],</span> <span class="s">&quot;j&quot;</span><span class="p">,</span>
         <span class="n">lazy</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">shuffle_up</span><span class="p">()</span>
     <span class="p">),</span>
 
     <span class="c"># Switch window focus to other pane(s) of stack</span>
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">"space"</span><span class="p">,</span>
-        <span class="n">lazy</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="nb">next</span><span class="p">()</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;space&quot;</span><span class="p">,</span>
+        <span class="n">lazy</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
     <span class="p">),</span>
 
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">"Left"</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;Left&quot;</span><span class="p">,</span>
         <span class="n">lazy</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">prevgroup</span><span class="p">()</span>
     <span class="p">),</span>
     
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">"Right"</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;Right&quot;</span><span class="p">,</span>
         <span class="n">lazy</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">nextgroup</span><span class="p">()</span>
     <span class="p">),</span>
 
     <span class="c"># Swap panes of split stack</span>
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">,</span> <span class="s">"shift"</span><span class="p">],</span> <span class="s">"space"</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">,</span> <span class="s">&quot;shift&quot;</span><span class="p">],</span> <span class="s">&quot;space&quot;</span><span class="p">,</span>
         <span class="n">lazy</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">rotate</span><span class="p">()</span>
     <span class="p">),</span>
 
@@ -218,80 +218,80 @@ Actually, I use Gnome3 on daily basis. But since I got my memory broken and left
     <span class="c"># Unsplit = 1 window displayed, like Max layout, but still with</span>
     <span class="c"># multiple stack panes</span>
     <span class="n">Key</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">mod</span><span class="p">,</span> <span class="s">"shift"</span><span class="p">],</span> <span class="s">"Return"</span><span class="p">,</span>
+        <span class="p">[</span><span class="n">mod</span><span class="p">,</span> <span class="s">&quot;shift&quot;</span><span class="p">],</span> <span class="s">&quot;Return&quot;</span><span class="p">,</span>
         <span class="n">lazy</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">toggle_split</span><span class="p">()</span>
     <span class="p">),</span>
-    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">"Return"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="s">"urxvt"</span><span class="p">)),</span>
+    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;Return&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="s">&quot;urxvt&quot;</span><span class="p">)),</span>
 
     <span class="c"># Toggle between different layouts as defined below</span>
-    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">"Tab"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">nextlayout</span><span class="p">()),</span>
-    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">"w"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">kill</span><span class="p">()),</span>
+    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;Tab&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">nextlayout</span><span class="p">()),</span>
+    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;w&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">kill</span><span class="p">()),</span>
 
-    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">,</span> <span class="s">"control"</span><span class="p">],</span> <span class="s">"r"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">restart</span><span class="p">()),</span>
-    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">,</span> <span class="s">"control"</span><span class="p">],</span> <span class="s">"q"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()),</span>
-    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">"r"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">spawncmd</span><span class="p">()),</span>
+    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">,</span> <span class="s">&quot;control&quot;</span><span class="p">],</span> <span class="s">&quot;r&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">restart</span><span class="p">()),</span>
+    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">,</span> <span class="s">&quot;control&quot;</span><span class="p">],</span> <span class="s">&quot;q&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()),</span>
+    <span class="n">Key</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;r&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">spawncmd</span><span class="p">()),</span>
 <span class="p">]</span>
 
 <span class="n">groups</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">Group</span><span class="p">(</span><span class="s">" urxvt "</span><span class="p">),</span>
-    <span class="n">Group</span><span class="p">(</span><span class="s">" web "</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="p">[</span><span class="n">Match</span><span class="p">(</span><span class="n">wm_class</span><span class="o">=</span><span class="p">[</span><span class="s">"Firefox"</span><span class="p">])]),</span>
-    <span class="n">Group</span><span class="p">(</span><span class="s">" blender "</span><span class="p">),</span>
-    <span class="n">Group</span><span class="p">(</span><span class="s">" inkscape "</span><span class="p">),</span>
-    <span class="n">Group</span><span class="p">(</span><span class="s">" gimp "</span><span class="p">),</span>
-    <span class="n">Group</span><span class="p">(</span><span class="s">" doc "</span><span class="p">),</span>
+    <span class="n">Group</span><span class="p">(</span><span class="s">&quot; urxvt &quot;</span><span class="p">),</span>
+    <span class="n">Group</span><span class="p">(</span><span class="s">&quot; web &quot;</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="p">[</span><span class="n">Match</span><span class="p">(</span><span class="n">wm_class</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;Firefox&quot;</span><span class="p">])]),</span>
+    <span class="n">Group</span><span class="p">(</span><span class="s">&quot; blender &quot;</span><span class="p">),</span>
+    <span class="n">Group</span><span class="p">(</span><span class="s">&quot; inkscape &quot;</span><span class="p">),</span>
+    <span class="n">Group</span><span class="p">(</span><span class="s">&quot; gimp &quot;</span><span class="p">),</span>
+    <span class="n">Group</span><span class="p">(</span><span class="s">&quot; doc &quot;</span><span class="p">),</span>
 <span class="p">]</span>
 
-<span class="n">dgroups_key_binder</span> <span class="o">=</span> <span class="n">simple_key_binder</span><span class="p">(</span><span class="s">"mod4"</span><span class="p">)</span>
+<span class="n">dgroups_key_binder</span> <span class="o">=</span> <span class="n">simple_key_binder</span><span class="p">(</span><span class="s">&quot;mod4&quot;</span><span class="p">)</span>
 
 
 <span class="n">layouts</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">layout</span><span class="o">.</span><span class="n">Max</span><span class="p">(),</span>
     <span class="n">layout</span><span class="o">.</span><span class="n">MonadTall</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="s">"xmonad tall"</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s">&quot;xmonad tall&quot;</span><span class="p">,</span>
             <span class="n">ratio</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
             <span class="n">border_width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
-            <span class="n">border_focus</span><span class="o">=</span><span class="s">"#335260"</span><span class="p">,</span>
-            <span class="n">border_normal</span><span class="o">=</span><span class="s">"#69B2B8"</span><span class="p">,</span>
+            <span class="n">border_focus</span><span class="o">=</span><span class="s">&quot;#335260&quot;</span><span class="p">,</span>
+            <span class="n">border_normal</span><span class="o">=</span><span class="s">&quot;#69B2B8&quot;</span><span class="p">,</span>
         <span class="p">),</span>
     <span class="n">layout</span><span class="o">.</span><span class="n">TreeTab</span><span class="p">(</span>
-            <span class="n">font</span><span class="o">=</span><span class="s">'Liberation Sans'</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s">"looking good"</span><span class="p">,</span>
-            <span class="n">bg_color</span><span class="o">=</span><span class="s">"#31363D"</span><span class="p">,</span>
-            <span class="n">inactive_bg</span><span class="o">=</span><span class="s">"151515"</span><span class="p">,</span>
+            <span class="n">font</span><span class="o">=</span><span class="s">&#39;Liberation Sans&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s">&quot;looking good&quot;</span><span class="p">,</span>
+            <span class="n">bg_color</span><span class="o">=</span><span class="s">&quot;#31363D&quot;</span><span class="p">,</span>
+            <span class="n">inactive_bg</span><span class="o">=</span><span class="s">&quot;151515&quot;</span><span class="p">,</span>
             <span class="n">panel_width</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
             <span class="n">margin_left</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
             <span class="n">margin_y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-            <span class="n">sections</span><span class="o">=</span><span class="p">[</span><span class="s">'TreeTab'</span><span class="p">],</span>
+            <span class="n">sections</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;TreeTab&#39;</span><span class="p">],</span>
             <span class="n">section_left</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
             <span class="n">padding_x</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-            <span class="n">active_bg</span><span class="o">=</span><span class="s">"#69B2B8"</span><span class="p">,</span>
+            <span class="n">active_bg</span><span class="o">=</span><span class="s">&quot;#69B2B8&quot;</span><span class="p">,</span>
             <span class="n">rounded</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
         <span class="p">),</span>
     <span class="n">layout</span><span class="o">.</span><span class="n">Stack</span><span class="p">(</span>
             <span class="n">num_stacks</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
             <span class="n">border_width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
-            <span class="n">border_focus</span><span class="o">=</span><span class="s">"#335260"</span><span class="p">,</span>
-            <span class="n">border_normal</span><span class="o">=</span><span class="s">"#69B2B8"</span><span class="p">,</span>
+            <span class="n">border_focus</span><span class="o">=</span><span class="s">&quot;#335260&quot;</span><span class="p">,</span>
+            <span class="n">border_normal</span><span class="o">=</span><span class="s">&quot;#69B2B8&quot;</span><span class="p">,</span>
         <span class="p">),</span>
     <span class="n">layout</span><span class="o">.</span><span class="n">Floating</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="s">"floating"</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s">&quot;floating&quot;</span><span class="p">,</span>
             <span class="n">border_width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
-            <span class="n">border_focus</span><span class="o">=</span><span class="s">"#335260"</span><span class="p">,</span>
-            <span class="n">border_normal</span><span class="o">=</span><span class="s">"#69B2B8"</span><span class="p">,</span>
+            <span class="n">border_focus</span><span class="o">=</span><span class="s">&quot;#335260&quot;</span><span class="p">,</span>
+            <span class="n">border_normal</span><span class="o">=</span><span class="s">&quot;#69B2B8&quot;</span><span class="p">,</span>
         <span class="p">)</span>
 <span class="p">]</span>
 
 <span class="n">floating_layout</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">Floating</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="s">"floating"</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s">&quot;floating&quot;</span><span class="p">,</span>
             <span class="n">border_width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
-            <span class="n">border_focus</span><span class="o">=</span><span class="s">"#69B2B8"</span><span class="p">,</span>
-            <span class="n">border_normal</span><span class="o">=</span><span class="s">"#335260"</span><span class="p">,</span>
+            <span class="n">border_focus</span><span class="o">=</span><span class="s">&quot;#69B2B8&quot;</span><span class="p">,</span>
+            <span class="n">border_normal</span><span class="o">=</span><span class="s">&quot;#335260&quot;</span><span class="p">,</span>
         <span class="p">)</span>
 
 <span class="n">widget_defaults</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-    <span class="n">font</span><span class="o">=</span><span class="s">'Liberation Sans'</span><span class="p">,</span>
+    <span class="n">font</span><span class="o">=</span><span class="s">&#39;Liberation Sans&#39;</span><span class="p">,</span>
     <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
-    <span class="n">background</span><span class="o">=</span><span class="s">"#974E69"</span><span class="p">,</span>
+    <span class="n">background</span><span class="o">=</span><span class="s">&quot;#974E69&quot;</span><span class="p">,</span>
     <span class="n">markup</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
 <span class="p">)</span>
 
@@ -303,36 +303,36 @@ Actually, I use Gnome3 on daily basis. But since I got my memory broken and left
                         <span class="n">borderwidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                         <span class="n">margin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                         <span class="n">padding</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
-                        <span class="n">active</span><span class="o">=</span><span class="s">"FFFFFF"</span><span class="p">,</span>
-                        <span class="n">inactive</span><span class="o">=</span><span class="s">"BABABA"</span><span class="p">,</span>
-                        <span class="n">highlight_method</span><span class="o">=</span><span class="s">"block"</span><span class="p">,</span>
-                        <span class="n">this_current_screen_border</span><span class="o">=</span><span class="s">"#335260"</span><span class="p">,</span>
+                        <span class="n">active</span><span class="o">=</span><span class="s">&quot;FFFFFF&quot;</span><span class="p">,</span>
+                        <span class="n">inactive</span><span class="o">=</span><span class="s">&quot;BABABA&quot;</span><span class="p">,</span>
+                        <span class="n">highlight_method</span><span class="o">=</span><span class="s">&quot;block&quot;</span><span class="p">,</span>
+                        <span class="n">this_current_screen_border</span><span class="o">=</span><span class="s">&quot;#335260&quot;</span><span class="p">,</span>
                         <span class="n">invert_mouse_wheel</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
                         <span class="n">rounded</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
                     <span class="p">),</span>
                 <span class="n">widget</span><span class="o">.</span><span class="n">Prompt</span><span class="p">(),</span>
                 <span class="n">widget</span><span class="o">.</span><span class="n">CurrentLayout</span><span class="p">(</span>
-                        <span class="n">background</span><span class="o">=</span><span class="s">"#69B2B8"</span><span class="p">,</span>
+                        <span class="n">background</span><span class="o">=</span><span class="s">&quot;#69B2B8&quot;</span><span class="p">,</span>
                     <span class="p">),</span>
                 <span class="n">widget</span><span class="o">.</span><span class="n">Spacer</span><span class="p">(),</span>
                 <span class="c">#widget.WindowName(),</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">TextBox</span><span class="p">(</span><span class="s">"testing"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"default"</span><span class="p">),</span>
+                <span class="n">widget</span><span class="o">.</span><span class="n">TextBox</span><span class="p">(</span><span class="s">&quot;testing&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;default&quot;</span><span class="p">),</span>
                 <span class="n">widget</span><span class="o">.</span><span class="n">Systray</span><span class="p">(),</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">Clock</span><span class="p">(</span><span class="n">format</span><span class="o">=</span><span class="s">' </span><span class="si">%</span><span class="s">I:</span><span class="si">%</span><span class="s">M </span><span class="si">%</span><span class="s">p '</span><span class="p">),</span>
+                <span class="n">widget</span><span class="o">.</span><span class="n">Clock</span><span class="p">(</span><span class="n">format</span><span class="o">=</span><span class="s">&#39; %I:%M %p &#39;</span><span class="p">),</span>
             <span class="p">],</span>
             <span class="mi">24</span><span class="p">,</span>
-            <span class="n">background</span><span class="o">=</span><span class="s">"#335260"</span><span class="p">,</span>
+            <span class="n">background</span><span class="o">=</span><span class="s">&quot;#335260&quot;</span><span class="p">,</span>
         <span class="p">),</span>
     <span class="p">),</span>
 <span class="p">]</span>
 
 <span class="c"># Drag floating layouts.</span>
 <span class="n">mouse</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">Drag</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">"Button1"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">set_position_floating</span><span class="p">(),</span>
+    <span class="n">Drag</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;Button1&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">set_position_floating</span><span class="p">(),</span>
         <span class="n">start</span><span class="o">=</span><span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">get_position</span><span class="p">()),</span>
-    <span class="n">Drag</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">"Button3"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">set_size_floating</span><span class="p">(),</span>
+    <span class="n">Drag</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;Button3&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">set_size_floating</span><span class="p">(),</span>
         <span class="n">start</span><span class="o">=</span><span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">get_size</span><span class="p">()),</span>
-    <span class="n">Click</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">"Button2"</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">bring_to_front</span><span class="p">())</span>
+    <span class="n">Click</span><span class="p">([</span><span class="n">mod</span><span class="p">],</span> <span class="s">&quot;Button2&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">bring_to_front</span><span class="p">())</span>
 <span class="p">]</span>
 
 <span class="n">dgroups_app_rules</span> <span class="o">=</span> <span class="p">[]</span>
@@ -342,15 +342,15 @@ Actually, I use Gnome3 on daily basis. But since I got my memory broken and left
 <span class="n">cursor_warp</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="n">auto_fullscreen</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="c"># XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this</span>
+<span class="c"># XXX: Gasp! We&#39;re lying here. In fact, nobody really uses or cares about this</span>
 <span class="c"># string besides java UI toolkits; you can see several discussions on the</span>
 <span class="c"># mailing lists, github issues, and other WM documentation that suggest setting</span>
-<span class="c"># this string if your java app doesn't work correctly. We may as well just lie</span>
-<span class="c"># and say that we're a working one by default.</span>
+<span class="c"># this string if your java app doesn&#39;t work correctly. We may as well just lie</span>
+<span class="c"># and say that we&#39;re a working one by default.</span>
 <span class="c">#</span>
 <span class="c"># We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in</span>
-<span class="c"># java that happens to be on java's whitelist.</span>
-<span class="n">wmname</span> <span class="o">=</span> <span class="s">"LG3D"</span></code></pre></figure>
+<span class="c"># java that happens to be on java&#39;s whitelist.</span>
+<span class="n">wmname</span> <span class="o">=</span> <span class="s">&quot;LG3D&quot;</span></code></pre></figure>
 
 <p><br />
 <br /></p>

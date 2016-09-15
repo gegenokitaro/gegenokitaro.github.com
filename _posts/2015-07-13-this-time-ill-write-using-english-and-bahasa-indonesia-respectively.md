@@ -19,7 +19,7 @@ Just installed Ubuntu recently, tweak it all over again, and riced it a little c
 
 Just to keep me reminded, here is list of the thing I'd like to do in my free time:
 
-1. <s>install funtoo</s> hell no, a pain in the ass
+* <s>install funtoo</s> hell no, a pain in the ass
 *  finish icon set
 *  design AP
 *  ask girlfriend out
